@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <element name="ffSchema">
+            <element name="metadata">
+                <element name="title">
+                    <a:documentation>Title of original text</a:documentation>
+                    <text/>
+                </element>
+                <oneOrMore>
+                    <element name="writer">
+                        <a:documentation>Name of either original author or remixer</a:documentation>
+                        <attribute name="ID">
+                            <data type="ID"/>
+                        </attribute>
+                        <attribute name="type">
+                            <choice>
+                                <value>original</value>
+                                <value>remixer</value>
+                            </choice>
+                        </attribute>
+                        <text/>
+                    </element>
+                </oneOrMore>
+                <zeroOrMore>
+                    <element name="character">
+                        <attribute name="ID">
+                            <data type="ID"/>
+                        </attribute>
+                        <text/>
+                    </element>
+                </zeroOrMore>
+            </element>
+            <element name="original">
+                <a:documentation>Paste original text here</a:documentation>
+                <oneOrMore>
+                    <element name="p">
+                        <oneOrMore>
+                            <choice>
+                                <text/>
+                                <element name="general">
+                                    <attribute name="remixerRef">
+                                        <data type="anyURI"/>
+                                    </attribute>
+                                    <attribute name="playID">
+                                        <data type="ID"/>
+                                    </attribute>
+                                    <optional>
+                                        <attribute name="charaRef">
+                                            <data type="anyURI"/>
+                                        </attribute>
+                                    </optional>
+                                    <text/>
+                                </element>
+                            </choice>
+                        </oneOrMore>
+                    </element>
+                </oneOrMore>
+            </element>
+            <element name="play">
+                <a:documentation>This is where you get to play!</a:documentation>
+                <oneOrMore>
+                    <choice>
+                        <oneOrMore>
+                            <element name="remix">
+                            <attribute name="playRef">
+                                <data type="anyURI"/>
+                            </attribute>
+                            <text/>
+                        </element>
+                        </oneOrMore>
+                        <oneOrMore>
+                            <element name="ana">
+                            <attribute name="playRef">
+                                <data type="anyURI"/>
+                            </attribute>
+                            <text/>
+                        </element>
+                        </oneOrMore>
+                        <oneOrMore>
+                            <element name="expand">
+                            <attribute name="playRef">
+                                <data type="anyURI"/>
+                            </attribute>
+                            <text/>
+                        </element>
+                        </oneOrMore>
+                    </choice>
+                </oneOrMore>
+            </element>
+        </element>
+    </start>
+</grammar>
