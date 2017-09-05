@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="file:/Users/caramessina/Documents/DH/XML/FF/remiXML/remiXML.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/caramessina/remiXML/master/remiXML.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <!--For the above name space in line 2, href/link should be pointing to the local file on your computer that holds the RelaxNG schema-->
 <ffSchema>
     <metadata>
