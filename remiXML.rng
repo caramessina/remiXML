@@ -47,9 +47,11 @@
                                 <element name="general">
                                     <attribute name="remixerID">
                                         <data type="anyURI"/>
+                                        <a:documentation>Use a # to point to and reference the remixer ID</a:documentation>
                                     </attribute>
                                     <attribute name="playID">
                                         <data type="ID"/>
+                                        <a:documentation>Use a # to point to and reference the playID in the third section</a:documentation>
                                     </attribute>
                                     <attribute name="playType">
                                          <choice>
@@ -63,6 +65,7 @@
                                     <optional>
                                         <attribute name="charaID">
                                             <data type="anyURI"/>
+                                            <a:documentation>Use a # to point to and reference the character ID from the metadata</a:documentation>
                                         </attribute>
                                     </optional>
                                     <text/>
