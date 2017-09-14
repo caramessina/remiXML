@@ -3,10 +3,14 @@
     xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
     <start>
-        <element name="ffSchema">
+        <element name="remiXML">
             <element name="metadata">
-                <element name="title">
+                <element name="original-title">
                     <a:documentation>Title of original text</a:documentation>
+                    <text/>
+                </element>
+                <element name="doc-title">
+                    <a:documentation>Title of this XML document; title of your choosing</a:documentation>
                     <text/>
                 </element>
                 <oneOrMore>
@@ -41,14 +45,23 @@
                             <choice>
                                 <text/>
                                 <element name="general">
-                                    <attribute name="remixerRef">
+                                    <attribute name="remixerID">
                                         <data type="anyURI"/>
                                     </attribute>
                                     <attribute name="playID">
                                         <data type="ID"/>
                                     </attribute>
+                                    <attribute name="playType">
+                                         <choice>
+                                             <value>remix</value>
+                                             <value>expand</value>
+                                             <value>analysis</value>
+                                             <value>question</value>
+                                            </choice>
+                                      </attribute>
+                                        <text/>
                                     <optional>
-                                        <attribute name="charaRef">
+                                        <attribute name="charaID">
                                             <data type="anyURI"/>
                                         </attribute>
                                     </optional>
@@ -65,15 +78,15 @@
                     <choice>
                         <oneOrMore>
                             <element name="remix">
-                            <attribute name="playRef">
+                            <attribute name="playID">
                                 <data type="anyURI"/>
                             </attribute>
                             <text/>
                         </element>
                         </oneOrMore>
                         <oneOrMore>
-                            <element name="ana">
-                            <attribute name="playRef">
+                            <element name="analysis">
+                            <attribute name="playID">
                                 <data type="anyURI"/>
                             </attribute>
                             <text/>
@@ -81,11 +94,19 @@
                         </oneOrMore>
                         <oneOrMore>
                             <element name="expand">
-                            <attribute name="playRef">
+                            <attribute name="playID">
                                 <data type="anyURI"/>
                             </attribute>
                             <text/>
                         </element>
+                        </oneOrMore>
+                        <oneOrMore>
+                            <element name="question">
+                                <attribute name="playID">
+                                    <data type="anyURI"/>
+                                </attribute>
+                                <text/>
+                            </element>
                         </oneOrMore>
                     </choice>
                 </oneOrMore>
