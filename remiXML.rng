@@ -14,16 +14,19 @@
                     <text/>
                 </element>
                 <oneOrMore>
-                    <element name="writer">
-                        <a:documentation>Name of either original author or remixer</a:documentation>
+                    <element name="original-writer">
+                        <a:documentation>Name of the original writer, whether it's a text written by someone else or yourself</a:documentation>
                         <attribute name="ID">
                             <data type="ID"/>
                         </attribute>
-                        <attribute name="type">
-                            <choice>
-                                <value>original</value>
-                                <value>remixer</value>
-                            </choice>
+                        <text/>
+                    </element>
+                </oneOrMore>
+                <oneOrMore>
+                    <element name="remixer">
+                        <a:documentation>Name of the remixer, whether its yourself or your peers</a:documentation>
+                        <attribute name="ID">
+                            <data type="ID"/>
                         </attribute>
                         <text/>
                     </element>
