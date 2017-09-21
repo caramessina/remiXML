@@ -6,14 +6,14 @@
         <html>
             <head>
                 <xsl:value-of select="metadata/doc-title"/>
-                <script>
+                <script><![CDATA[
                     // When the user clicks on div, open the popup
                     function myFunction() {
                     var popup = document.getElementById("myPopup");
                     popup.classList.toggle("show");
                     }
-                </script>
-                <style>
+                ]]></script>
+                <style><![CDATA[
                     body {background-color:  #e6e6e6;}
                     h1   {color: black;}
                     p    {color: black;}
@@ -69,7 +69,7 @@
                     from {opacity: 0;}
                     to {opacity:1 ;}
                     }
-                </style>
+                ]]></style>
             </head>
             <body>
                 <xsl:apply-templates/>
@@ -77,7 +77,6 @@
         </html>
     </xsl:template>
     
-    <!--Figure out pop up-->
     
     <xsl:template match="metadata">
         <div style="bold">
@@ -104,7 +103,7 @@
     <xsl:template match="general">
             <span style="color:green">
                 <div class="popup" onclick="myFunction()"><xsl:apply-templates/>
-                    <span class="popuptext" id="myPopup"><xsl:value-of select="general"/></span>
+                    <span class="popuptext" id="myPopup">LA</span>
                 </div>
             </span>
     </xsl:template>
