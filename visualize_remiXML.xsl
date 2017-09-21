@@ -7,7 +7,6 @@
             <head>
                 <xsl:value-of select="metadata/doc-title"/>
                 <script><![CDATA[
-                    // When the user clicks on div, open the popup
                     function myFunction(id) {
                     var popup = document.getElementById(id);
                     popup.classList.toggle("show");
@@ -101,35 +100,38 @@
     </xsl:template>
     
     <xsl:template match="/remiXML/original/p/expand">
+        <xsl:variable name="identify" select="@playID"/>    <!--{$identify}-->
         <span style="color:purple">
-                <span class="popup" onclick="myFunction({@playID})"><xsl:apply-templates/>
-                    <span class="popuptext" id="{@playID}"><xsl:apply-templates select="/remiXML/play/expand[@playREF=@playID]"/></span>
+                <span class="popup" onclick="myFunction({$identify})"><xsl:apply-templates/>
+                    <span class="popuptext" id="{$identify}"><xsl:apply-templates select="/remiXML/play/expand[@playREF=$identify]"/></span>
                 </span>
             </span>
     </xsl:template>
     
     <xsl:template match="/remiXML/original/p/transform">
+        <xsl:variable name="identify" select="@playID"/>  
         <span style="color:green">
-            <span class="popup" onclick="myFunction({@playID})"><xsl:apply-templates/>
-                <span class="popuptext" id="{@playID}"><xsl:apply-templates select="/remiXML/play/transform[@playREF=@playID]"/></span>
+            <span class="popup" onclick="myFunction({$identify})"><xsl:apply-templates/>
+                <span class="popuptext" id="{$identify}"><xsl:apply-templates select="/remiXML/play/transform[@playREF=$identify]"/></span>
             </span>
         </span>
     </xsl:template>
     
     <xsl:template match="/remiXML/original/p/analysis">
+        <xsl:variable name="identify" select="@playID"/>
         <span style="color:yellow">
-            <span class="popup" onclick="myFunction({@playID})"><xsl:apply-templates/>
-                <span class="popuptext" id="{@playID}"><xsl:apply-templates select="/remiXML/play/analysis[@playREF=@playID]"/></span>
+            <span class="popup" onclick="myFunction({$identify})"><xsl:apply-templates/>
+                <span class="popuptext" id="{$identify}"><xsl:apply-templates select="/remiXML/play/analysis[@playREF=$identify]"/></span>
             </span>
         </span>
     </xsl:template>
 
 
-    <xsl:template match="/remiXML/original/p/expand">
+    <xsl:template match="/remiXML/original/p/question">
         <xsl:variable name="identify" select="@playID"/>    <!--{$identify}-->
-        <span style="color:purple">
+        <span style="color:blue">
             <span class="popup" onclick="myFunction({$identify})"><xsl:apply-templates/>
-                <span class="popuptext" id="{$identify}"><xsl:apply-templates select="/remiXML/play/expand[@playREF=$identify]"/></span>
+                <span class="popuptext" id="{$identify}"><xsl:apply-templates select="/remiXML/play/question[@playREF=$identify]"/></span>
             </span>
         </span>
     </xsl:template>
