@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/caramessina/remiXML/master/remiXML.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet type="" href=""?>
+<?xml-stylesheet href="https://raw.githubusercontent.com/caramessina/remiXML/master/visualize_remiXML.xsl"?>
 <remiXML>
     <metadata>
         <original-title>The title of the original text here</original-title>
