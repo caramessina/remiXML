@@ -1,0 +1,120 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">Your title of this edited XML document here<script>
+                    // When the user clicks on div, open the popup
+                    function myFunction() {
+                    var popup = document.getElementById("myPopup");
+                    popup.classList.toggle("show");
+                    }
+                </script><style>
+                    body {background-color:  #e6e6e6;}
+                    h1   {color: black;}
+                    p    {color: black;}
+                    /* Popup container */
+                    .popup {
+                    position: relative;
+                    display: inline-block;
+                    cursor: pointer;
+                    }
+                    
+                    /* The actual popup (appears on top) */
+                    .popup .popuptext {
+                    visibility: hidden;
+                    width: 160px;
+                    background-color: #555;
+                    color: #fff;
+                    text-align: center;
+                    border-radius: 6px;
+                    padding: 8px 0;
+                    position: absolute;
+                    z-index: 1;
+                    bottom: 125%;
+                    left: 50%;
+                    margin-left: -80px;
+                    }
+                    
+                    /* Popup arrow */
+                    .popup .popuptext::after {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: #555 transparent transparent transparent;
+                    }
+                    
+                    /* Toggle this class when clicking on the popup container (hide and show the popup) */
+                    .popup .show {
+                    visibility: visible;
+                    -webkit-animation: fadeIn 1s;
+                    animation: fadeIn 1s
+                    }
+                    
+                    /* Add animation (fade in the popup) */
+                    @-webkit-keyframes fadeIn {
+                    from {opacity: 0;} 
+                    to {opacity: 1;}
+                    }
+                    
+                    @keyframes fadeIn {
+                    from {opacity: 0;}
+                    to {opacity:1 ;}
+                    }
+                </style></head>
+   <body>
+      
+      <div style="bold">
+         <h1>Your title of this edited XML document here</h1>
+         <h2>Remixed by Name of remixer</h2>
+      </div>
+      
+      <hr>
+      <div>
+         <h3>Original Text: "The title of the original text here" by Name of original writer</h3>
+      </div>
+      
+      <p>
+         Original text is going to go here. The "p" element is the paragraph <span style="color:green">
+            <div class="popup" onclick="myFunction()">element<span class="popuptext" id="myPopup">LA</span></div></span>. 
+         
+      </p>
+      
+      <p>
+         The most <span style="color:green">
+            <div class="popup" onclick="myFunction()">important<span class="popuptext" id="myPopup">LA</span></div></span> element to remember is what goes inside the p element though, which is the <span style="color:green">
+            <div class="popup" onclick="myFunction()"> "general" element<span class="popuptext" id="myPopup">LA</span></div></span>.
+         
+      </p>
+      
+      <p>
+         Remember to use <span style="color:green">
+            <div class="popup" onclick="myFunction()">hashtags<span class="popuptext" id="myPopup">LA</span></div></span> for each attribute value and ID to point to those specific IDs. 
+         
+      </p>
+      
+      
+      <hr>
+      <h3>Play</h3>
+      <ul>
+         
+         <li><b>Analysis: </b>This is your analysis of the first general element in the original text. The hashtag
+            that you are using here is pointing up to the specific moment in the text.
+         </li>
+         
+         <li><b>Question: </b>This is your question about the second general element in the original text. You know
+            this is because the playID here is pointing up the playID in the original text
+         </li>
+         
+         <li><b>Expand:</b>This is your expansion about of a moment in the original text. You know this is because
+            the playID here is pointing up the playID in the original text
+         </li>
+         
+         <li><b>Remix: </b>This is your remix of a moment from the original text.
+         </li>
+         
+      </ul>
+      
+   </body>
+</html>

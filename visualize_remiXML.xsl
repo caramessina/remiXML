@@ -102,9 +102,9 @@
     
     <xsl:template match="general">
             <span style="color:green">
-                <div class="popup" onclick="myFunction()"><xsl:apply-templates/>
+                <span class="popup" onclick="myFunction()"><xsl:apply-templates/>
                     <span class="popuptext" id="myPopup">LA</span>
-                </div>
+                </span>
             </span>
     </xsl:template>
     <!--MUST FIGURE OUT HOW TO NAVIGATE XML TREE-->
