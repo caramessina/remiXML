@@ -8,8 +8,8 @@
                 <xsl:value-of select="metadata/doc-title"/>
                 <script><![CDATA[
                     // When the user clicks on div, open the popup
-                    function myFunction() {
-                    var popup = document.getElementById("myPopup");
+                    function myFunction(id) {
+                    var popup = document.getElementById(id);
                     popup.classList.toggle("show");
                     }
                 ]]></script>
@@ -100,14 +100,15 @@
         </p>
     </xsl:template>
     
-    <xsl:template match="general">
-            <span style="color:green">
-                <span class="popup" onclick="myFunction()"><xsl:apply-templates/>
-                    <span class="popuptext" id="myPopup">LA</span>
+    <xsl:template match="/remiXML/original/p/expand">
+        <xsl:variable name="identify" select="@playID"/>    <!--{$identify}-->
+        <span style="color:purple">
+                <span class="popup" onclick="myFunction({$identify})"><xsl:apply-templates/>
+                    <span class="popuptext" id="{$identify}"><xsl:apply-templates select="/remiXML/play/expand[@playREF=$identify]"/></span>
                 </span>
             </span>
     </xsl:template>
-    <!--MUST FIGURE OUT HOW TO NAVIGATE XML TREE-->
+    <!--DO THIS FOR EACH NEW ELEMENT IN THE RELAXNG SCHEMA-->
     
     <xsl:template match="play">
         <hr/>
@@ -117,27 +118,27 @@
     </xsl:template>
    
     
-    <xsl:template match="analysis">
+    <xsl:template match="/remiXML/play/analysis">
         <li>
             <b><xsl:text>Analysis: </xsl:text> </b><xsl:apply-templates/>
         </li>
     </xsl:template>
     
-    <xsl:template match="expand">
+    <xsl:template match="/remiXML/play/expand">
         <li>
-            <b><xsl:text>Expand:</xsl:text></b><xsl:apply-templates/>
+            <b><xsl:text>Expansion:</xsl:text></b><xsl:apply-templates/>
         </li>
     </xsl:template>
     
-    <xsl:template match="question">
+    <xsl:template match="/remiXML/play/question">
         <li>
            <b> <xsl:text>Question: </xsl:text></b><xsl:apply-templates/>
         </li>
     </xsl:template>
     
-    <xsl:template match="remix">
+    <xsl:template match="/remiXML/play/transform">
         <li>
-            <b><xsl:text>Remix: </xsl:text></b><xsl:apply-templates/>
+            <b><xsl:text>Transformation: </xsl:text></b><xsl:apply-templates/>
         </li>
     </xsl:template>
     
