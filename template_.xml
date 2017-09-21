@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://raw.githubusercontent.com/caramessina/remiXML/master/remiXML.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<remiXML>
+    <metadata>
+        <original-title>The title of the original text here</original-title>
+        <doc-title>Your title of this XML document here</doc-title>
+        <original-writer ID="AU1">Name of original writer (yourself or another author)</original-writer>
+        <remixer ID="RE1">Name of remixer; yourself or a peer</remixer>
+    </metadata>
+    <original>
+        <p>Original text is going to go here. The "p" element is the paragraph <question remixerID="RE1" playID="QU1">element</question></p>
+        <p>The most <analysis remixerID="RE1" playID="ANA1">important</analysis> element to remember is what goes inside the "p" element.</p>
+        <p>These <expand remixerID="RE1" playID="EX2">elements</expand> are the following: analysis, question, transform, and <expand remixerID="RE1" playID="EX1">expand.</expand></p>
+        <p><analysis remixerID="RE1" playID="ANA2">Remember</analysis> when you are using one of these elements to match the "playID" attribute with the "playREF" in the third section, <transform  remixerID="RE1" playID="TRA1">the "play" section.</transform></p>
+    </original>
+    <play>
+        <analysis playREF="ANA1">This is your analysis of the section you marked with the "analysis" element; remember, you may have multiple of these each with a unique playID and playREF to connect the moment you marked up in the original text to the moment you analyzed in the play section</analysis>
+        <expand playREF="EX1">This is your expansion of the section you marked with the "expand" element; remember, you may have multiple of these each with a unique playID and playREF to connect the moment you marked up in the original text to the moment you expanded in the play section</expand>
+        <question playREF="QU1">This is your question about the section you marked with the "question" element; remember, you may have multiple of these each with a unique playID and playREF to connect the moment you marked up in the original text to the moment you have a question about in the play section</question>
+        <transform playREF="TRA1">This is your transformation of the section you marked with the "transformation" element; remember, you may have multiple of these each with a unique playID and playREF to connect the moment you marked up in the original text to the moment you transformed in the play section</transform>
+        <analysis playREF="ANA2">Here is your second analysis. Note that the "ANA2" playREF matches the "ANA2" playID in the original text.</analysis>
+        <expand playREF="EX2">Here is your second expansion. Note that the "EX2" playREF matches the "EX2" playID in the original text.</expand>
+    </play>
+</remiXML>
