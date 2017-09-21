@@ -101,14 +101,38 @@
     </xsl:template>
     
     <xsl:template match="/remiXML/original/p/expand">
-        <xsl:variable name="identify" select="@playID"/>    <!--{$identify}-->
         <span style="color:purple">
-                <span class="popup" onclick="myFunction({$identify})"><xsl:apply-templates/>
-                    <span class="popuptext" id="{$identify}"><xsl:apply-templates select="/remiXML/play/expand[@playREF=$identify]"/></span>
+                <span class="popup" onclick="myFunction({@playID})"><xsl:apply-templates/>
+                    <span class="popuptext" id="{@playID}"><xsl:apply-templates select="/remiXML/play/expand[@playREF=@playID]"/></span>
                 </span>
             </span>
     </xsl:template>
-    <!--DO THIS FOR EACH NEW ELEMENT IN THE RELAXNG SCHEMA-->
+    
+    <xsl:template match="/remiXML/original/p/transform">
+        <span style="color:green">
+            <span class="popup" onclick="myFunction({@playID})"><xsl:apply-templates/>
+                <span class="popuptext" id="{@playID}"><xsl:apply-templates select="/remiXML/play/transform[@playREF=@playID]"/></span>
+            </span>
+        </span>
+    </xsl:template>
+    
+    <xsl:template match="/remiXML/original/p/analysis">
+        <span style="color:yellow">
+            <span class="popup" onclick="myFunction({@playID})"><xsl:apply-templates/>
+                <span class="popuptext" id="{@playID}"><xsl:apply-templates select="/remiXML/play/analysis[@playREF=@playID]"/></span>
+            </span>
+        </span>
+    </xsl:template>
+
+
+    <xsl:template match="/remiXML/original/p/expand">
+        <xsl:variable name="identify" select="@playID"/>    <!--{$identify}-->
+        <span style="color:purple">
+            <span class="popup" onclick="myFunction({$identify})"><xsl:apply-templates/>
+                <span class="popuptext" id="{$identify}"><xsl:apply-templates select="/remiXML/play/expand[@playREF=$identify]"/></span>
+            </span>
+        </span>
+    </xsl:template>
     
     <xsl:template match="play">
         <hr/>
