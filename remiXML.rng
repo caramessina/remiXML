@@ -48,8 +48,8 @@
                                         <data type="ID"/>
                                         <a:documentation>Use this playID to reference the analysis in the third section</a:documentation>
                                     </attribute>
+                                    <text/>
                                 </element>
-                                <text/>
                                 <element name="expand">
                                     <attribute name="remixerID">
                                         <data type="anyURI"/>
@@ -59,6 +59,7 @@
                                         <data type="ID"/>
                                         <a:documentation>Use this playID to reference the analysis in the third section</a:documentation>
                                     </attribute>
+                                    <text/>
                                 </element>
                                 <element name="question">
                                     <attribute name="remixerID">
@@ -69,6 +70,7 @@
                                         <data type="ID"/>
                                         <a:documentation>Use this playID to reference the analysis in the third section</a:documentation>
                                     </attribute>
+                                    <text/>
                                 </element>
                                 <element name="transform">
                                     <attribute name="remixerID">
@@ -79,6 +81,7 @@
                                         <data type="ID"/>
                                         <a:documentation>Use this playID to reference the analysis in the third section</a:documentation>
                                     </attribute>
+                                    <text/>
                                 </element>
                             </choice>
                         </oneOrMore>
