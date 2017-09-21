@@ -8,7 +8,7 @@
                 <xsl:value-of select="metadata/doc-title"/>
                 <script><![CDATA[
                     function myFunction(id) {
-                    var popup = document.getElementById(id);
+                    var popup = document.getElementById();
                     popup.classList.toggle("show");
                     }
                 ]]></script>
