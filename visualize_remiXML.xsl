@@ -139,33 +139,24 @@
     <xsl:template match="play">
         <hr/>
         <h3>Play</h3>
-        <ul><xsl:apply-templates/>
-        </ul>
+        <p><xsl:apply-templates/></p>
     </xsl:template>
    
     
     <xsl:template match="/remiXML/play/analysis">
-        <li>
             <b><xsl:text>Analysis: </xsl:text> </b><xsl:apply-templates/>
-        </li>
     </xsl:template>
     
     <xsl:template match="/remiXML/play/expand">
-        <li>
             <b><xsl:text>Expansion:</xsl:text></b><xsl:apply-templates/>
-        </li>
     </xsl:template>
     
     <xsl:template match="/remiXML/play/question">
-        <li>
            <b> <xsl:text>Question: </xsl:text></b><xsl:apply-templates/>
-        </li>
     </xsl:template>
     
     <xsl:template match="/remiXML/play/transform">
-        <li>
             <b><xsl:text>Transformation: </xsl:text></b><xsl:apply-templates/>
-        </li>
     </xsl:template>
     
 </xsl:stylesheet>
