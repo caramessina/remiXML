@@ -13,9 +13,10 @@
                     }
                 ]]></script>
                 <style><![CDATA[
-                    body {background-color:  #e6e6e6;}
+                    body {background-color:  white;}
                     h1   {color: black;}
                     p    {color: black;}
+                    
                     /* Popup container */
                     .popup {
                     position: relative;
@@ -27,8 +28,8 @@
                     .popup .popuptext {
                     visibility: hidden;
                     width: 160px;
-                    background-color: #555;
-                    color: #fff;
+                    background-color: black;
+                    color: white;
                     text-align: center;
                     border-radius: 6px;
                     padding: 8px 0;
@@ -144,19 +145,19 @@
    
     
     <xsl:template match="/remiXML/play/analysis">
-            <b><xsl:text>Analysis: </xsl:text> </b><xsl:apply-templates/>
+            <br/><b><xsl:text>Analysis: </xsl:text> </b><xsl:apply-templates/>
     </xsl:template>
     
     <xsl:template match="/remiXML/play/expand">
-            <b><xsl:text>Expansion:</xsl:text></b><xsl:apply-templates/>
+        <br/><b><xsl:text>Expansion:</xsl:text></b><xsl:apply-templates/>
     </xsl:template>
     
     <xsl:template match="/remiXML/play/question">
-           <b> <xsl:text>Question: </xsl:text></b><xsl:apply-templates/>
+        <br/><b> <xsl:text>Question: </xsl:text></b><xsl:apply-templates/>
     </xsl:template>
     
     <xsl:template match="/remiXML/play/transform">
-            <b><xsl:text>Transformation: </xsl:text></b><xsl:apply-templates/>
+        <br/><b><xsl:text>Transformation: </xsl:text></b><xsl:apply-templates/>
     </xsl:template>
     
 </xsl:stylesheet>
