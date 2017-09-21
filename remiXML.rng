@@ -31,14 +31,6 @@
                         <text/>
                     </element>
                 </oneOrMore>
-                <zeroOrMore>
-                    <element name="character">
-                        <attribute name="ID">
-                            <data type="ID"/>
-                        </attribute>
-                        <text/>
-                    </element>
-                </zeroOrMore>
             </element>
             <element name="original">
                 <a:documentation>Paste original text here</a:documentation>
@@ -47,31 +39,46 @@
                         <oneOrMore>
                             <choice>
                                 <text/>
-                                <element name="general">
+                                <element name="analysis">
                                     <attribute name="remixerID">
                                         <data type="anyURI"/>
-                                        <a:documentation>Use a # to point to and reference the remixer ID</a:documentation>
+                                        <a:documentation>Use this ID to point to and reference your remixer ID</a:documentation>
                                     </attribute>
                                     <attribute name="playID">
                                         <data type="ID"/>
-                                        <a:documentation>Use a # to point to and reference the playID in the third section</a:documentation>
+                                        <a:documentation>Use this playID to reference the analysis in the third section</a:documentation>
                                     </attribute>
-                                    <attribute name="playType">
-                                         <choice>
-                                             <value>remix</value>
-                                             <value>expand</value>
-                                             <value>analysis</value>
-                                             <value>question</value>
-                                            </choice>
-                                      </attribute>
-                                        <text/>
-                                    <optional>
-                                        <attribute name="charaID">
-                                            <data type="anyURI"/>
-                                            <a:documentation>Use a # to point to and reference the character ID from the metadata</a:documentation>
-                                        </attribute>
-                                    </optional>
-                                    <text/>
+                                </element>
+                                <text/>
+                                <element name="expand">
+                                    <attribute name="remixerID">
+                                        <data type="anyURI"/>
+                                        <a:documentation>Use this ID to point to and reference your remixer ID</a:documentation>
+                                    </attribute>
+                                    <attribute name="playID">
+                                        <data type="ID"/>
+                                        <a:documentation>Use this playID to reference the analysis in the third section</a:documentation>
+                                    </attribute>
+                                </element>
+                                <element name="question">
+                                    <attribute name="remixerID">
+                                        <data type="anyURI"/>
+                                        <a:documentation>Use this ID to point to and reference your remixer ID</a:documentation>
+                                    </attribute>
+                                    <attribute name="playID">
+                                        <data type="ID"/>
+                                        <a:documentation>Use this playID to reference the analysis in the third section</a:documentation>
+                                    </attribute>
+                                </element>
+                                <element name="transform">
+                                    <attribute name="remixerID">
+                                        <data type="anyURI"/>
+                                        <a:documentation>Use this ID to point to and reference your remixer ID</a:documentation>
+                                    </attribute>
+                                    <attribute name="playID">
+                                        <data type="ID"/>
+                                        <a:documentation>Use this playID to reference the analysis in the third section</a:documentation>
+                                    </attribute>
                                 </element>
                             </choice>
                         </oneOrMore>
@@ -83,8 +90,8 @@
                 <oneOrMore>
                     <choice>
                         <oneOrMore>
-                            <element name="remix">
-                            <attribute name="playID">
+                            <element name="transform">
+                            <attribute name="playREF">
                                 <data type="anyURI"/>
                             </attribute>
                             <text/>
@@ -92,7 +99,7 @@
                         </oneOrMore>
                         <oneOrMore>
                             <element name="analysis">
-                            <attribute name="playID">
+                                <attribute name="playREF">
                                 <data type="anyURI"/>
                             </attribute>
                             <text/>
@@ -100,7 +107,7 @@
                         </oneOrMore>
                         <oneOrMore>
                             <element name="expand">
-                            <attribute name="playID">
+                                <attribute name="playREF">
                                 <data type="anyURI"/>
                             </attribute>
                             <text/>
@@ -108,7 +115,7 @@
                         </oneOrMore>
                         <oneOrMore>
                             <element name="question">
-                                <attribute name="playID">
+                                <attribute name="playREF">
                                     <data type="anyURI"/>
                                 </attribute>
                                 <text/>
