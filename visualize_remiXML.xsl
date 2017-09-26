@@ -6,14 +6,6 @@
         <html>
             <head>
                 <xsl:value-of select="metadata/doc-title"/>
-                <script><![CDATA[
-                    function myFunction(id) {
-                    var popup = document.getElementById(id);
-                    popup.classList.toggle("show");
-                    }
-                ]]></script>
-                
-                
                 <style><![CDATA[
                                         body {background-color:  white;}
                     h1   {color: black;}
@@ -72,24 +64,18 @@
                     /* Toggle this class when clicking on the popup container (hide and show the popup) */
                     .popup .show {
                     visibility: visible;
-                    -webkit-animation: fadeIn 1s;
-                    animation: fadeIn 1s
                     }
                     
-                    /* Add animation (fade in the popup) */
-                    @-webkit-keyframes fadeIn {
-                    from {opacity: 0;} 
-                    to {opacity: 1;}
-                    }
-                    
-                    @keyframes fadeIn {
-                    from {opacity: 0;}
-                    to {opacity:1 ;}
-                    }
                 ]]></style>
             </head>
             <body>
                 <xsl:apply-templates/>
+                <script><![CDATA[
+                    function myFunction(id) {
+                    var popup = document.getElementById(id);
+                    popup.classList.toggle("show");
+                    }
+                ]]></script>
             </body>
         </html>
     </xsl:template>
