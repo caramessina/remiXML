@@ -145,7 +145,7 @@
    
     
     <xsl:template match="/remiXML/play/analysis">
-            <br/><b><xsl:text>Analysis: </xsl:text> </b><xsl:apply-templates/>
+            <b><xsl:text>Analysis: </xsl:text> </b><xsl:apply-templates/>
     </xsl:template>
     
     <xsl:template match="/remiXML/play/expand">
