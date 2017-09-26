@@ -60,7 +60,7 @@
             <body>
                 <xsl:apply-templates/>
                 <script><![CDATA[
-                    function myFunction(id) {
+                    function myFunction() {
                     var popup = document.getElementById(id);
                     popup.classList.toggle('show');
                     }
