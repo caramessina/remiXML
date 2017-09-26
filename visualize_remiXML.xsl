@@ -157,6 +157,7 @@
     <xsl:template match="play">
         <hr/>
         <div class="footer"><h3>Play</h3>
+            <br/><h3><xsl:text>Remixed by </xsl:text><xsl:value-of select="../metadata/remixer"/></h3>
             <p><xsl:apply-templates/></p></div>
     </xsl:template>
    
