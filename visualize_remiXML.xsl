@@ -60,7 +60,7 @@
             <body>
                 <xsl:apply-templates/>
                 <script><![CDATA[
-                    function myFunction() {
+                    function myFunction(id) {
                     var popup = document.getElementById(id);
                     popup.classList.toggle('show');
                     }
@@ -113,7 +113,7 @@
     <xsl:template match="/remiXML/original/p/analysis">
         <xsl:variable name="identify" select="@playID"/>
         <span style="color:yellow">
-            <span class="popup" onclick="myFunction({$identify})"><xsl:apply-templates/>
+            <span class="popup" onclick="myFunction()"><xsl:apply-templates/>
                 <span class="popuptext" id="{$identify}"><xsl:apply-templates select="/remiXML/play/analysis[@playREF=$identify]"/></span>
             </span>
         </span>
