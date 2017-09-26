@@ -13,11 +13,27 @@
                     }
                 ]]></script>
                 
+                
                 <style><![CDATA[
-                    body {background-color:  white;}
+                                        body {background-color:  white;}
                     h1   {color: black;}
                     p    {color: black;}
                     
+                   
+                    /*header*/
+                    .header {
+    background-color: #f1f1f1;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style the footer */
+.footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+}
+
                     /* Popup container */
                     .popup {
                     position: relative;
@@ -80,7 +96,7 @@
     
     
     <xsl:template match="metadata">
-        <div style="bold">
+        <div class="header" style="bold">
             <h1><xsl:value-of select="doc-title"/></h1>
         <h2><xsl:text>Remixed by </xsl:text><xsl:value-of select="remixer"/></h2>
         </div>
@@ -140,8 +156,8 @@
     
     <xsl:template match="play">
         <hr/>
-        <h3>Play</h3>
-        <p><xsl:apply-templates/></p>
+        <div class="footer"><h3>Play</h3>
+            <p><xsl:apply-templates/></p></div>
     </xsl:template>
    
     
