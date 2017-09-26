@@ -37,7 +37,7 @@
                     .popup .popuptext {
                     visibility: hidden;
                     width: 160px;
-                    background-color: white;
+                    background-color: gray;
                     color: black;
                     text-align: center;
                     border-radius: 6px;
@@ -62,6 +62,7 @@
                 <script><![CDATA[
                     function myFunction(id) {
                     var popup = document.getElementById(id);
+                    console.log(id);
                     popup.classList.toggle('show');
                     }
                 ]]></script>
