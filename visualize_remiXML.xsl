@@ -12,6 +12,7 @@
                     popup.classList.toggle("show");
                     }
                 ]]></script>
+                
                 <style><![CDATA[
                     body {background-color:  white;}
                     h1   {color: black;}
@@ -103,7 +104,7 @@
     <xsl:template match="/remiXML/original/p/expand">
         <xsl:variable name="identify" select="@playID"/>    <!--{$identify}-->
         <span style="color:purple">
-                <span class="popup" onclick="myFunction({$identify})"><xsl:apply-templates/>
+                <span class="popup" onmouseover="myFunction({$identify})"><xsl:apply-templates/>
                     <span class="popuptext" id="{$identify}"><xsl:apply-templates select="/remiXML/play/expand[@playREF=$identify]"/></span>
                 </span>
             </span>
@@ -145,7 +146,7 @@
    
     
     <xsl:template match="/remiXML/play/analysis">
-            <b><xsl:text>Analysis: </xsl:text> </b><xsl:apply-templates/>
+        <br/><b><xsl:text>Analysis: </xsl:text> </b><xsl:apply-templates/>
     </xsl:template>
     
     <xsl:template match="/remiXML/play/expand">
