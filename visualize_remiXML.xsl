@@ -12,19 +12,19 @@
                     p    {color: black;}
                     
                    
-                    /*header*/
+                    /*style the header*/
                     .header {
-    background-color: #f1f1f1;
-    padding: 20px;
-    text-align: center;
-}
+                    background-color: #f1f1f1;
+                    padding: 20px;
+                    text-align: center;
+                    }
 
-/* Style the footer */
-.footer {
-    background-color: #f1f1f1;
-    padding: 10px;
-    text-align: center;
-}
+                    /*style the footer */
+                    .footer {
+                    background-color: #f1f1f1;
+                    padding: 10px;
+                    text-align: center;
+                    }
 
                     /* Popup container */
                     .popup {
@@ -37,8 +37,8 @@
                     .popup .popuptext {
                     visibility: hidden;
                     width: 160px;
-                    background-color: black;
-                    color: white;
+                    background-color: white;
+                    color: black;
                     text-align: center;
                     border-radius: 6px;
                     padding: 8px 0;
@@ -49,17 +49,6 @@
                     margin-left: -80px;
                     }
                     
-                    /* Popup arrow */
-                    .popup .popuptext::after {
-                    content: "";
-                    position: absolute;
-                    top: 100%;
-                    left: 50%;
-                    margin-left: -5px;
-                    border-width: 5px;
-                    border-style: solid;
-                    border-color: #555 transparent transparent transparent;
-                    }
                     
                     /* Toggle this class when clicking on the popup container (hide and show the popup) */
                     .popup .show {
@@ -73,7 +62,7 @@
                 <script><![CDATA[
                     function myFunction(id) {
                     var popup = document.getElementById(id);
-                    popup.classList.toggle("show");
+                    popup.classList.toggle('show');
                     }
                 ]]></script>
             </body>
