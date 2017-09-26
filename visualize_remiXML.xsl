@@ -123,9 +123,9 @@
     <xsl:template match="/remiXML/original/p/question">
         <xsl:variable name="identify" select="@playID"/>    <!--{$identify}-->
         <span style="color:blue">
-            <div class="popup" onclick="myFunction({$identify})"><xsl:apply-templates/>
+            <span class="popup" onclick="myFunction({$identify})"><xsl:apply-templates/>
                 <span class="popuptext" id="{$identify}"><xsl:apply-templates select="/remiXML/play/question[@playREF=$identify]"/></span>
-            </div>
+            </span>
         </span>
     </xsl:template>
     
