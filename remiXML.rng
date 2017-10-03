@@ -10,12 +10,14 @@
                     <text/>
                 </element>
                 <element name="doc-title">
-                    <a:documentation>Title of this XML document; title of your choosing</a:documentation>
+                    <a:documentation>Title of this XML document; title of your
+                        choosing</a:documentation>
                     <text/>
                 </element>
                 <oneOrMore>
                     <element name="original-writer">
-                        <a:documentation>Name of the original writer, whether it's a text written by someone else or yourself</a:documentation>
+                        <a:documentation>Name of the original writer, whether it's a text written by
+                            someone else or yourself</a:documentation>
                         <attribute name="ID">
                             <data type="ID"/>
                         </attribute>
@@ -24,7 +26,8 @@
                 </oneOrMore>
                 <oneOrMore>
                     <element name="remixer">
-                        <a:documentation>Name of the remixer, whether its yourself or your peers</a:documentation>
+                        <a:documentation>Name of the remixer, whether its yourself or your
+                            peers</a:documentation>
                         <attribute name="ID">
                             <data type="ID"/>
                         </attribute>
@@ -42,44 +45,79 @@
                                 <element name="analysis">
                                     <attribute name="remixerID">
                                         <data type="anyURI"/>
-                                        <a:documentation>Use this ID to point to and reference your remixer ID</a:documentation>
+                                        <a:documentation>Use this ID to point to and reference your
+                                            remixer ID</a:documentation>
                                     </attribute>
                                     <attribute name="playID">
                                         <data type="ID"/>
-                                        <a:documentation>Use this playID to reference the analysis in the third section</a:documentation>
+                                        <a:documentation>Use this playID to reference the analysis
+                                            in the third section</a:documentation>
                                     </attribute>
                                     <text/>
                                 </element>
                                 <element name="expand">
                                     <attribute name="remixerID">
                                         <data type="anyURI"/>
-                                        <a:documentation>Use this ID to point to and reference your remixer ID</a:documentation>
+                                        <a:documentation>Use this ID to point to and reference your
+                                            remixer ID</a:documentation>
                                     </attribute>
                                     <attribute name="playID">
                                         <data type="ID"/>
-                                        <a:documentation>Use this playID to reference the analysis in the third section</a:documentation>
+                                        <a:documentation>Use this playID to reference the analysis
+                                            in the third section</a:documentation>
                                     </attribute>
                                     <text/>
                                 </element>
                                 <element name="question">
                                     <attribute name="remixerID">
                                         <data type="anyURI"/>
-                                        <a:documentation>Use this ID to point to and reference your remixer ID</a:documentation>
+                                        <a:documentation>Use this ID to point to and reference your
+                                            remixer ID</a:documentation>
                                     </attribute>
                                     <attribute name="playID">
                                         <data type="ID"/>
-                                        <a:documentation>Use this playID to reference the analysis in the third section</a:documentation>
+                                        <a:documentation>Use this playID to reference the analysis
+                                            in the third section</a:documentation>
                                     </attribute>
                                     <text/>
                                 </element>
                                 <element name="transform">
                                     <attribute name="remixerID">
                                         <data type="anyURI"/>
-                                        <a:documentation>Use this ID to point to and reference your remixer ID</a:documentation>
+                                        <a:documentation>Use this ID to point to and reference your
+                                            remixer ID</a:documentation>
                                     </attribute>
                                     <attribute name="playID">
                                         <data type="ID"/>
-                                        <a:documentation>Use this playID to reference the analysis in the third section</a:documentation>
+                                        <a:documentation>Use this playID to reference the analysis
+                                            in the third section</a:documentation>
+                                    </attribute>
+                                    <text/>
+                                </element>
+                                <element name="feedback">
+                                    <attribute name="remixerID">
+                                        <data type="anyURI"/>
+                                        <a:documentation>Use this ID to point to and reference your
+                                            remixer ID</a:documentation>
+                                    </attribute>
+                                    <attribute name="playID">
+                                        <data type="ID"/>
+                                        <a:documentation>Use this playID to reference the feedback
+                                            in the third section</a:documentation>
+                                    </attribute>
+                                    <text/>
+                                </element>
+                                <element name="replace">
+                                    <attribute name="remixerID">
+                                        <data type="anyURI"/>
+                                        <a:documentation>Use this ID to point to and reference your
+                                            remixer ID</a:documentation>
+                                    </attribute>
+                                    <attribute name="playID">
+                                        <data type="ID"/>
+                                        <a:documentation>Use this playID to reference the
+                                            replacement you make in the third
+                                            section</a:documentation>
                                     </attribute>
                                     <text/>
                                 </element>
@@ -94,30 +132,62 @@
                     <choice>
                         <oneOrMore>
                             <element name="transform">
-                            <attribute name="playREF">
-                                <data type="anyURI"/>
-                            </attribute>
-                            <text/>
-                        </element>
+                                <a:documentation>When you are transforming a piece, this
+                                    transformation exists outside of the universe and timeline
+                                    constructed in the text. It's an alternate
+                                    universe/timeline</a:documentation>
+                                <attribute name="playREF">
+                                    <data type="anyURI"/>
+                                </attribute>
+                                <text/>
+                            </element>
+                        </oneOrMore>
+                        <oneOrMore>
+                            <element name="feedback">
+                                <a:documentation>This element is mostly used when you are engaging
+                                    with a peers' text and you want to provide general feedback </a:documentation>
+                                <attribute name="playREF">
+                                    <data type="anyURI"/>
+                                </attribute>
+                                <text/>
+                            </element>
+                        </oneOrMore>
+                        <oneOrMore>
+                            <element name="replace">
+                                <a:documentation>Unlike transformation, in "replace" you choose a
+                                    few words to replace. For example, you may change the
+                                    pronouns/gender of a character.</a:documentation>
+                                <attribute name="playREF">
+                                    <data type="anyURI"/>
+                                </attribute>
+                                <text/>
+                            </element>
                         </oneOrMore>
                         <oneOrMore>
                             <element name="analysis">
+                                <a:documentation>Explain your analysis of the particular moment you
+                                    marked up to analyze from the text</a:documentation>
                                 <attribute name="playREF">
-                                <data type="anyURI"/>
-                            </attribute>
-                            <text/>
-                        </element>
+                                    <data type="anyURI"/>
+                                </attribute>
+                                <text/>
+                            </element>
                         </oneOrMore>
                         <oneOrMore>
                             <element name="expand">
+                                <a:documentation>Expand on a particular moment, character, idea,
+                                    detail, etc that the original text presents. </a:documentation>
                                 <attribute name="playREF">
-                                <data type="anyURI"/>
-                            </attribute>
-                            <text/>
-                        </element>
+                                    <data type="anyURI"/>
+                                </attribute>
+                                <text/>
+                            </element>
                         </oneOrMore>
                         <oneOrMore>
                             <element name="question">
+                                <a:documentation>Ask a question! The most productive questions begin
+                                    with "why." But fun moments of play can also happen when you
+                                    answer "what if" questions.</a:documentation>
                                 <attribute name="playREF">
                                     <data type="anyURI"/>
                                 </attribute>
