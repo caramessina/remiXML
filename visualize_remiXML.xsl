@@ -120,6 +120,14 @@
         </span>
     </xsl:template>
 
+    <xsl:template match="/remiXML/original/p/feedback">
+        <xsl:variable name="identify" select="@playID"/>  
+        <span style="color:pink">
+            <span class="popup" onclick="myFunction(this, '{$identify}')"><xsl:apply-templates/>
+                <span class="popuptext" id="{$identify}"><xsl:apply-templates select="/remiXML/play/transform[@playREF=$identify]"/></span>
+            </span>
+        </span>
+    </xsl:template>
 
     <xsl:template match="/remiXML/original/p/question">
         <xsl:variable name="identify" select="@playID"/>    <!--{$identify}-->
@@ -148,6 +156,11 @@
     <xsl:template match="/remiXML/play/question">
         <br/><b> <xsl:text>Question: </xsl:text></b><xsl:apply-templates/>
     </xsl:template>
+    
+    <xsl:template match="/remiXML/play/feedback">
+        <br/><b> <xsl:text>Feedback: </xsl:text></b><xsl:apply-templates/>
+    </xsl:template>
+    
     
     <xsl:template match="/remiXML/play/transform">
         <br/><b><xsl:text>Transformation: </xsl:text></b><xsl:apply-templates/>
