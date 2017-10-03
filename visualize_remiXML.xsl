@@ -171,7 +171,7 @@
     </xsl:template>
     
     <xsl:template match="/remiXML/play/replace">
-        <br/><b> <xsl:text>Feedback: </xsl:text></b><xsl:apply-templates/>
+        <br/><b> <xsl:text>Replace: </xsl:text></b><xsl:apply-templates/>
     </xsl:template>
     
     <xsl:template match="/remiXML/play/transform">
