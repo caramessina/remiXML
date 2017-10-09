@@ -42,6 +42,10 @@
                         <oneOrMore>
                             <choice>
                                 <text/>
+                                <element name="l">
+                                    <a:documentation>Use the l to indicate the next line in a poem; the p can indicate stanzas.</a:documentation>
+                                    <text/>
+                                </element>
                                 <element name="analysis">
                                     <attribute name="remixerID">
                                         <data type="anyURI"/>
