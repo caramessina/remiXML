@@ -9,9 +9,9 @@
                 <style><![CDATA[
                                         body {background-color:  white;}
                     h1   {color: black;
-                    margin: 7cm 7cm 7cm 7cm;}
+                    margin: 1cm 4cm 1cm 4cm;}
                     p    {color: black;
-                           margin: 7cm 7cm 7cm 7cm;
+                           margin: 1cm 4cm 1cm 4cm;
                     }
                    
                     /*style the header*/
