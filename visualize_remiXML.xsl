@@ -93,6 +93,12 @@
         </p>
     </xsl:template>
     
+    <xsl:template match="l">
+        <br>
+            <xsl:apply-templates/>
+        </br>
+    </xsl:template>
+    
     <xsl:template match="/remiXML/original/p/expand">
         <xsl:variable name="identify" select="@playID"/>    <!--{$identify}-->
         <span style="color:blue">
