@@ -44,7 +44,90 @@
                                 <text/>
                                 <element name="l">
                                     <a:documentation>Use the l to indicate the next line in a poem; the p can indicate stanzas.</a:documentation>
-                                    <text/>
+                                    <oneOrMore>
+                                        <choice>
+                                            <text/>
+                                            <element name="analysis">
+                                                <attribute name="remixerID">
+                                                    <data type="anyURI"/>
+                                                    <a:documentation>Use this ID to point to and reference your
+                                                        remixer ID</a:documentation>
+                                                </attribute>
+                                                <attribute name="playID">
+                                                    <data type="ID"/>
+                                                    <a:documentation>Use this playID to reference the analysis
+                                                        in the third section</a:documentation>
+                                                </attribute>
+                                                <text/>
+                                            </element>
+                                            <element name="expand">
+                                                <attribute name="remixerID">
+                                                    <data type="anyURI"/>
+                                                    <a:documentation>Use this ID to point to and reference your
+                                                        remixer ID</a:documentation>
+                                                </attribute>
+                                                <attribute name="playID">
+                                                    <data type="ID"/>
+                                                    <a:documentation>Use this playID to reference the analysis
+                                                        in the third section</a:documentation>
+                                                </attribute>
+                                                <text/>
+                                            </element>
+                                            <element name="question">
+                                                <attribute name="remixerID">
+                                                    <data type="anyURI"/>
+                                                    <a:documentation>Use this ID to point to and reference your
+                                                        remixer ID</a:documentation>
+                                                </attribute>
+                                                <attribute name="playID">
+                                                    <data type="ID"/>
+                                                    <a:documentation>Use this playID to reference the analysis
+                                                        in the third section</a:documentation>
+                                                </attribute>
+                                                <text/>
+                                            </element>
+                                            <element name="transform">
+                                                <attribute name="remixerID">
+                                                    <data type="anyURI"/>
+                                                    <a:documentation>Use this ID to point to and reference your
+                                                        remixer ID</a:documentation>
+                                                </attribute>
+                                                <attribute name="playID">
+                                                    <data type="ID"/>
+                                                    <a:documentation>Use this playID to reference the analysis
+                                                        in the third section</a:documentation>
+                                                </attribute>
+                                                <text/>
+                                            </element>
+                                            <element name="feedback">
+                                                <attribute name="remixerID">
+                                                    <data type="anyURI"/>
+                                                    <a:documentation>Use this ID to point to and reference your
+                                                        remixer ID</a:documentation>
+                                                </attribute>
+                                                <attribute name="playID">
+                                                    <data type="ID"/>
+                                                    <a:documentation>Use this playID to reference the feedback
+                                                        in the third section</a:documentation>
+                                                </attribute>
+                                                <text/>
+                                            </element>
+                                            <element name="replace">
+                                                <attribute name="remixerID">
+                                                    <data type="anyURI"/>
+                                                    <a:documentation>Use this ID to point to and reference your
+                                                        remixer ID</a:documentation>
+                                                </attribute>
+                                                <attribute name="playID">
+                                                    <data type="ID"/>
+                                                    <a:documentation>Use this playID to reference the
+                                                        replacement you make in the third
+                                                        section</a:documentation>
+                                                </attribute>
+                                                <text/>
+                                            </element>
+                                        </choice>
+                                    </oneOrMore>
                                 </element>
                                 <element name="analysis">
                                     <attribute name="remixerID">
