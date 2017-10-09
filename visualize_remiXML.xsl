@@ -108,7 +108,7 @@
             </span>
     </xsl:template>
     
-    <xsl:template match="/remiXML/original/l/expand">
+    <xsl:template match="/remiXML/original/p/l/expand">
         <xsl:variable name="identify" select="@playID"/>    <!--{$identify}-->
         <span style="color:blue">
             <span class="popup" onclick="myFunction(this, '{$identify}')"><xsl:apply-templates/>
@@ -126,7 +126,7 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="/remiXML/original/l/transform">
+    <xsl:template match="/remiXML/original/p/l/transform">
         <xsl:variable name="identify" select="@playID"/>  
         <span style="color:green">
             <span class="popup" onclick="myFunction(this, '{$identify}')"><xsl:apply-templates/>
@@ -144,7 +144,7 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="/remiXML/original/l/analysis">
+    <xsl:template match="/remiXML/original/p/l/analysis">
         <xsl:variable name="identify" select="@playID"/>
         <span style="color:purple">
             <span class="popup" onclick="myFunction(this, '{$identify}')"><xsl:apply-templates/>
@@ -162,7 +162,7 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="/remiXML/original/l/feedback">
+    <xsl:template match="/remiXML/original/p/l/feedback">
         <xsl:variable name="identify" select="@playID"/>  
         <span style="color:pink">
             <span class="popup" onclick="myFunction(this, '{$identify}')"><xsl:apply-templates/>
@@ -180,7 +180,7 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="/remiXML/original/l/replace">
+    <xsl:template match="/remiXML/original/p/l/replace">
         <xsl:variable name="identify" select="@playID"/>  
         <span style="color:orange">
             <span class="popup" onclick="myFunction(this, '{$identify}')"><xsl:apply-templates/>
@@ -198,7 +198,7 @@
         </span>
     </xsl:template>
     
-    <xsl:template match="/remiXML/original/l/question">
+    <xsl:template match="/remiXML/original/p/l/question">
         <xsl:variable name="identify" select="@playID"/>    <!--{$identify}-->
         <span style="color:red">
             <span class="popup" onclick="myFunction(this, '{$identify}')"><xsl:apply-templates/>
