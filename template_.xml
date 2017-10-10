@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://raw.githubusercontent.com/caramessina/remiXML/master/remiXML.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="https://raw.githubusercontent.com/caramessina/remiXML/master/visualize_remiXML.xsl"?>
+<?xml-stylesheet href="./visualize_remiXML.xsl"?>
 <remiXML>
     <metadata>
         <original-title>The title of the original text here</original-title>
@@ -14,8 +14,13 @@
                 remixerID="CM1" playID="QU1">element</question></p>
         <p>The most <analysis remixerID="CM1" playID="ANA1">important</analysis> element to remember
             is what goes inside the "p" element.</p>
+        <p><l>Here there might be some lines</l>
+            <l>that go between the paragraph</l>
+            <l>in which the "p" element <analysis remixerID="CM1" playID="ANA3">acts like a stanza</analysis></l>
+            <l>and the "l" element acts like a line.</l>
+        </p>
         <p>These <expand remixerID="CM1" playID="EX2">elements</expand> are the following: analysis,
-            question, transform, and <expand remixerID="CM1" playID="EX1">expand.</expand></p>
+            question, transform, replace, feedback and <expand remixerID="CM1" playID="EX1">expand.</expand></p>
         <p><analysis remixerID="CM1" playID="ANA2">Remember</analysis> when you are using one of
             these elements to match the "playID" attribute with the <replace playID="RE1" remixerID="CM1">"playREF"</replace> in the third section,
                 <transform remixerID="CM1" playID="TRA1">the "play" section.</transform></p>
@@ -44,5 +49,6 @@
         <feedback playREF="FE1">Here is your first piece of feedback. Note that the "FE1" playREF matches the
             "FE1" playID in the original text</feedback>
         <replace playREF="RE1">Here is your first replace. Note that the "RE1" playREF matches the "RE1" playID in the original text</replace>
+        <analysis playREF="ANA3">You can also use the play elements in each line! Don't forget, though, that you cannot overlap tags! When the first tag begins and another one is encased inside that first tag, the encased tag must end before the first tag.</analysis>
     </play>
 </remiXML>
