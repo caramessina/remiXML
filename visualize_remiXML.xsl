@@ -30,7 +30,7 @@
                     /* Popup container */
                     .popup {
                     position: relative;
-                    display: inline-block;
+                    display: inline;
                     cursor: pointer;
                     }
                     
