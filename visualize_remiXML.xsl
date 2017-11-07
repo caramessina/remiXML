@@ -8,7 +8,7 @@
                 <xsl:value-of select="metadata/doc-title"/>
                 <style><![CDATA[
                                         body {background-color:  white;
-                                        margin: 50px}
+                                        margin: 10px 50px 10px 50px}
                     h1   {color: black;}
                     p    {color: black;}
                     
