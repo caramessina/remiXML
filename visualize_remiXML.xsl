@@ -79,15 +79,7 @@
         <h2><xsl:text>By </xsl:text><xsl:value-of select="original-writer"/></h2>
         </div>
     </xsl:template>
-    
-    <xsl:template match="original">
-        <hr/>
-        <div>
-        <h3><xsl:text>Remixed by </xsl:text><xsl:value-of select="../metadata/original-writer"/>
-        </h3>
-        </div>
-        <xsl:apply-templates/>
-    </xsl:template>
+   
     
     <xsl:template match="p">
         <p>
