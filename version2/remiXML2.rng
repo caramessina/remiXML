@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    <start>
+        <element name="remiXML">
+            <element name="metadata">
+                <element name="originalTitle">
+                    <a:documentation>Title of original text</a:documentation>
+                    <text/>
+                </element>
+                <oneOrMore>
+                    <element name="originalAuthor">
+                        <a:documentation>Name of the original author of the text. There might be
+                            multiple authors of this document.</a:documentation>
+                        <text/>
+                    </element>
+                </oneOrMore>
+                <element name="documentTitle">
+                    <a:documentation>Title of this XML document; title of your
+                        choosing.</a:documentation>
+                    <text/>
+                </element>
+                <oneOrMore>
+                    <element name="documentAuthor">
+                        <a:documentation>Your name here. There might be multiple authors of this
+                            document.</a:documentation>
+                        <attribute name="ID">
+                            <data type="ID"/>
+                        </attribute>
+                        <text/>
+                    </element>
+                </oneOrMore>
+            </element>
+            <element name="original">
+                <a:documentation>Paste original text here</a:documentation>
+                <oneOrMore>
+                    <element name="p">
+                        <a:documentation>Use the p element to indicate a paragraph or stanza in a
+                            poem.</a:documentation>
+                        <oneOrMore>
+                            <choice>
+                                <text/>
+                                <element name="closeRead">
+                                    <a:documentation>The closeRead element is where you can do a
+                                        close reading of the author's original language and word
+                                        choice. This is more of a traditional approach to reading,
+                                        one that asks you to study and analyze specific moments. </a:documentation>
+                                    <zeroOrMore>
+                                        <attribute name="daID">
+                                            <data type="anyURI"/>
+                                            <a:documentation>If there are multiple authors
+                                                (documentAuthor, NOT originalAuthor) of this
+                                                document, use this to indicate who marked up this
+                                                moment </a:documentation>
+                                        </attribute>
+                                    </zeroOrMore>
+                                    <attribute name="ID">
+                                        <data type="ID"/>
+                                        <a:documentation>Match this ID with the correct "closeRead"
+                                            element in the play section</a:documentation>
+                                    </attribute>
+                                    <attribute name="type">
+                                        <choice>
+                                            <value>pattern</value>
+                                            <a:documentation>Analyze a larger pattern in the
+                                                language and what this pattern may
+                                                suggest</a:documentation>
+                                            <value>wordChoice</value>
+                                            <a:documentation>Analyze specific word choices that the
+                                                author uses and think about why they made that
+                                                choice</a:documentation>
+                                            <value>description</value>
+                                            <a:documentation>Analyze the meaning of a description
+                                                that the author provides</a:documentation>
+                                            <value>inference</value>
+                                            <a:documentation>Analyze what a specific moment in the
+                                                text may be insinuating. How did you come to this
+                                                inference?</a:documentation>
+                                            <value>critique</value>
+                                            <a:documentation>Be critical of how something is
+                                                represented or shown. Might be useful for
+                                                problematizing narrative choices.</a:documentation>
+                                        </choice>
+                                    </attribute>
+                                    <text/>
+                                </element>
+                                <element name="replace">
+                                    <a:documentation>The replace element should only be used to
+                                        replace a specific word/phrase. You might use this element
+                                        multiple times if the word appears multiple times throughout
+                                        the original text.</a:documentation>
+                                    <zeroOrMore>
+                                        <attribute name="daID">
+                                            <data type="anyURI"/>
+                                            <a:documentation>If there are multiple authors
+                                                (documentAuthor, NOT originalAuthor) of this
+                                                document, use this to indicate who marked up this
+                                                moment </a:documentation>
+                                        </attribute>
+                                    </zeroOrMore>
+                                    <attribute name="ID">
+                                        <data type="ID"/>
+                                        <a:documentation>Match this ID with the correct "replace"
+                                            element in the play section</a:documentation>
+                                    </attribute>
+                                    <attribute name="type">
+                                        <choice>
+                                            <value>pronoun</value>
+                                            <a:documentation>Replace a pronoun (she, her, him, he,
+                                                them, they, etc) with another pronoun. This may be
+                                                useful if you're interested in identity
+                                                bending.</a:documentation>
+                                            <value>adjective</value>
+                                            <a:documentation>Replace a descriptive word to think
+                                                about changing how a noun (person, place, thing) is
+                                                described. This may be useful if you're interested
+                                                in identity bending. </a:documentation>
+                                            <value>noun</value>
+                                            <a:documentation>Replace a person, place, or thing. For
+                                                example, you might switch one character with another
+                                                or change the location of the original text. This
+                                                may be useful if you're interested in an alterverse,
+                                                alternate history, or identity bending. </a:documentation>
+                                            <value>verb</value>
+                                            <a:documentation>Replace an action word (verb) to change
+                                                the subject's action.</a:documentation>
+                                        </choice>
+                                    </attribute>
+                                    <text/>
+                                </element>
+                                <element name="expand">
+                                    <a:documentation>The expand element will be useful when you want
+                                        to expand a particular moment. This may be useful if you're
+                                        interested in a character's backstory or would like to
+                                        develop on a character who may not appear
+                                        often.</a:documentation>
+                                    <zeroOrMore>
+                                        <attribute name="daID">
+                                            <data type="anyURI"/>
+                                            <a:documentation>If there are multiple authors
+                                                (documentAuthor, NOT originalAuthor) of this
+                                                document, use this to indicate who marked up this
+                                                moment </a:documentation>
+                                        </attribute>
+                                    </zeroOrMore>
+                                    <attribute name="ID">
+                                        <data type="ID"/>
+                                        <a:documentation>Match this ID with the correct "expand"
+                                            element in the play section</a:documentation>
+                                    </attribute>
+                                    <attribute name="type">
+                                        <choice>
+                                            <value>background</value>
+                                            <a:documentation>Explore the background of a particular
+                                                idea, moment, character, interaction, location,
+                                                etc.</a:documentation>
+                                            <value>moment</value>
+                                            <a:documentation>Expand on a particular moment in the
+                                                original text that you would like to see more
+                                                of.</a:documentation>
+                                            <value>description</value>
+                                            <a:documentation>Expand on a particular
+                                                description.</a:documentation>
+                                            <value>character</value>
+                                            <a:documentation>Expand on a character's actions. Maybe
+                                                there is a character who you're interested in and
+                                                would like to develop further. Take a moment they
+                                                appear and further explore what else they might be
+                                                doing. </a:documentation>
+                                        </choice>
+                                    </attribute>
+                                    <text/>
+                                </element>
+                                <element name="restory">
+                                    <a:documentation>The restory element is where you can transform
+                                        something about the story. You might focus on identity,
+                                        time, place, and counter-storytelling. This element asks you
+                                        to answer the question "what if this event/detail in the
+                                        story was different?"</a:documentation>
+                                    <zeroOrMore>
+                                        <attribute name="daID">
+                                            <data type="anyURI"/>
+                                            <a:documentation>If there are multiple authors
+                                                (documentAuthor, NOT originalAuthor) of this
+                                                document, use this to indicate who marked up this
+                                                moment </a:documentation>
+                                        </attribute>
+                                    </zeroOrMore>
+                                    <attribute name="ID">
+                                        <data type="ID"/>
+                                        <a:documentation>Match this ID with the correct "restory"
+                                            element in the play section</a:documentation>
+                                    </attribute>
+                                    <attribute name="type">
+                                        <choice>
+                                            <value>identity</value>
+                                            <a:documentation>There are different types of identity
+                                                bending, including racebending, queerbending,
+                                                genderbending, agebending, and more. You might pair
+                                                this element up with the "replace"
+                                                element"</a:documentation>
+                                            <value>AU</value>
+                                            <a:documentation>AU stands for "alternate universe." You
+                                                want to explore an alternate universe/location from
+                                                the original text.</a:documentation>
+                                            <value>alternateTime</value>
+                                            <a:documentation>Similar to AU, this asks you to think
+                                                about an alternate history from the original
+                                                text.</a:documentation>
+                                            <value>parody</value>
+                                            <a:documentation>Do a satirical
+                                                transformation.</a:documentation>
+                                            <value>counterStory</value>
+                                            <a:documentation>Shift perspectives and explore the
+                                                story from a different character's point of view.
+                                                This is particulary important in thinking about
+                                                whose stories are untold, misrepresented, or ignored
+                                                (women, people of color, the LGBTQ comunity,
+                                                etc).</a:documentation>
+                                            <value/>
+                                            <value/>
+                                        </choice>
+                                    </attribute>
+                                    <text/>
+                                </element>
+                                <element name="question">
+                                    <a:documentation>The question element is when you may have about
+                                        the original text.</a:documentation>
+                                    <zeroOrMore>
+                                        <attribute name="daID">
+                                            <data type="anyURI"/>
+                                            <a:documentation>If there are multiple authors
+                                                (documentAuthor, NOT originalAuthor) of this
+                                                document, use this to indicate who marked up this
+                                                moment </a:documentation>
+                                        </attribute>
+                                    </zeroOrMore>
+                                    <attribute name="ID">
+                                        <data type="ID"/>
+                                        <a:documentation>Match this ID with the correct "question"
+                                            element in the play section</a:documentation>
+                                    </attribute>
+                                    <attribute name="type">
+                                        <choice>
+                                            <value>content</value>
+                                            <a:documentation>A question about the content in the
+                                                story and what is happening.</a:documentation>
+                                            <value>hypothetical</value>
+                                            <a:documentation>A hypothetical question, such as "what
+                                                if this event was different?" or "how would the
+                                                characters react if this happened?" This
+                                                hypothetical question might be followed up with a
+                                                "restory" or "expand" element</a:documentation>
+                                            <value>critical</value>
+                                            <a:documentation>A question that may problematize a
+                                                particular moment or idea in the original
+                                                text.</a:documentation>
+                                        </choice>
+                                    </attribute>
+                                    <text/>
+                                </element>
+                                <element name="l">
+                                    <a:documentation>Use the l to indicate the next line in a poem;
+                                        the p can indicate stanzas.</a:documentation>
+                                    <text/>
+                                    <element name="closeRead">
+                                        <a:documentation>The closeRead element is where you can do a
+                                            close reading of the author's original language and word
+                                            choice. This is more of a traditional approach to
+                                            reading, one that asks you to study and analyze specific
+                                            moments. </a:documentation>
+                                        <zeroOrMore>
+                                            <attribute name="daID">
+                                                <data type="anyURI"/>
+                                                <a:documentation>If there are multiple authors
+                                                  (documentAuthor, NOT originalAuthor) of this
+                                                  document, use this to indicate who marked up this
+                                                  moment </a:documentation>
+                                            </attribute>
+                                        </zeroOrMore>
+                                        <attribute name="ID">
+                                            <data type="ID"/>
+                                            <a:documentation>Match this ID with the correct
+                                                "closeRead" element in the play
+                                                section</a:documentation>
+                                        </attribute>
+                                        <attribute name="type">
+                                            <choice>
+                                                <value>pattern</value>
+                                                <a:documentation>Analyze a larger pattern in the
+                                                  language and what this pattern may
+                                                  suggest</a:documentation>
+                                                <value>wordChoice</value>
+                                                <a:documentation>Analyze specific word choices that
+                                                  the author uses and think about why they made that
+                                                  choice</a:documentation>
+                                                <value>description</value>
+                                                <a:documentation>Analyze the meaning of a
+                                                  description that the author
+                                                  provides</a:documentation>
+                                                <value>inference</value>
+                                                <a:documentation>Analyze what a specific moment in
+                                                  the text may be insinuating. How did you come to
+                                                  this inference?</a:documentation>
+                                                <value>critique</value>
+                                                <a:documentation>Be critical of how something is
+                                                  represented or shown. Might be useful for
+                                                  problematizing narrative
+                                                  choices.</a:documentation>
+                                            </choice>
+                                        </attribute>
+                                        <text/>
+                                    </element>
+                                    <element name="replace">
+                                        <a:documentation>The replace element should only be used to
+                                            replace a specific word/phrase. You might use this
+                                            element multiple times if the word appears multiple
+                                            times throughout the original text.</a:documentation>
+                                        <zeroOrMore>
+                                            <attribute name="daID">
+                                                <data type="anyURI"/>
+                                                <a:documentation>If there are multiple authors
+                                                  (documentAuthor, NOT originalAuthor) of this
+                                                  document, use this to indicate who marked up this
+                                                  moment </a:documentation>
+                                            </attribute>
+                                        </zeroOrMore>
+                                        <attribute name="ID">
+                                            <data type="ID"/>
+                                            <a:documentation>Match this ID with the correct
+                                                "replace" element in the play
+                                                section</a:documentation>
+                                        </attribute>
+                                        <attribute name="type">
+                                            <choice>
+                                                <value>pronoun</value>
+                                                <a:documentation>Replace a pronoun (she, her, him,
+                                                  he, them, they, etc) with another pronoun. This
+                                                  may be useful if you're interested in identity
+                                                  bending.</a:documentation>
+                                                <value>adjective</value>
+                                                <a:documentation>Replace a descriptive word to think
+                                                  about changing how a noun (person, place, thing)
+                                                  is described. This may be useful if you're
+                                                  interested in identity bending. </a:documentation>
+                                                <value>noun</value>
+                                                <a:documentation>Replace a person, place, or thing.
+                                                  For example, you might switch one character with
+                                                  another or change the location of the original
+                                                  text. This may be useful if you're interested in
+                                                  an alterverse, alternate history, or identity
+                                                  bending. </a:documentation>
+                                                <value>verb</value>
+                                                <a:documentation>Replace an action word (verb) to
+                                                  change the subject's action.</a:documentation>
+                                            </choice>
+                                        </attribute>
+                                        <text/>
+                                    </element>
+                                    <element name="expand">
+                                        <a:documentation>The expand element will be useful when you
+                                            want to expand a particular moment. This may be useful
+                                            if you're interested in a character's backstory or would
+                                            like to develop on a character who may not appear
+                                            often.</a:documentation>
+                                        <zeroOrMore>
+                                            <attribute name="daID">
+                                                <data type="anyURI"/>
+                                                <a:documentation>If there are multiple authors
+                                                  (documentAuthor, NOT originalAuthor) of this
+                                                  document, use this to indicate who marked up this
+                                                  moment </a:documentation>
+                                            </attribute>
+                                        </zeroOrMore>
+                                        <attribute name="ID">
+                                            <data type="ID"/>
+                                            <a:documentation>Match this ID with the correct "expand"
+                                                element in the play section</a:documentation>
+                                        </attribute>
+                                        <attribute name="type">
+                                            <choice>
+                                                <value>background</value>
+                                                <a:documentation>Explore the background of a
+                                                  particular idea, moment, character, interaction,
+                                                  location, etc.</a:documentation>
+                                                <value>moment</value>
+                                                <a:documentation>Expand on a particular moment in
+                                                  the original text that you would like to see more
+                                                  of.</a:documentation>
+                                                <value>description</value>
+                                                <a:documentation>Expand on a particular
+                                                  description.</a:documentation>
+                                                <value>character</value>
+                                                <a:documentation>Expand on a character's actions.
+                                                  Maybe there is a character who you're interested
+                                                  in and would like to develop further. Take a
+                                                  moment they appear and further explore what else
+                                                  they might be doing. </a:documentation>
+                                            </choice>
+                                        </attribute>
+                                        <text/>
+                                    </element>
+                                    <element name="restory">
+                                        <a:documentation>The restory element is where you can
+                                            transform something about the story. You might focus on
+                                            identity, time, place, and counter-storytelling. This
+                                            element asks you to answer the question "what if this
+                                            event/detail in the story was
+                                            different?"</a:documentation>
+                                        <zeroOrMore>
+                                            <attribute name="daID">
+                                                <data type="anyURI"/>
+                                                <a:documentation>If there are multiple authors
+                                                  (documentAuthor, NOT originalAuthor) of this
+                                                  document, use this to indicate who marked up this
+                                                  moment </a:documentation>
+                                            </attribute>
+                                        </zeroOrMore>
+                                        <attribute name="ID">
+                                            <data type="ID"/>
+                                            <a:documentation>Match this ID with the correct
+                                                "restory" element in the play
+                                                section</a:documentation>
+                                        </attribute>
+                                        <attribute name="type">
+                                            <choice>
+                                                <value>identity</value>
+                                                <a:documentation>There are different types of
+                                                  identity bending, including racebending,
+                                                  queerbending, genderbending, agebending, and more.
+                                                  You might pair this element up with the "replace"
+                                                  element"</a:documentation>
+                                                <value>AU</value>
+                                                <a:documentation>AU stands for "alternate universe."
+                                                  You want to explore an alternate universe/location
+                                                  from the original text.</a:documentation>
+                                                <value>alternateTime</value>
+                                                <a:documentation>Similar to AU, this asks you to
+                                                  think about an alternate history from the original
+                                                  text.</a:documentation>
+                                                <value>parody</value>
+                                                <a:documentation>Do a satirical
+                                                  transformation.</a:documentation>
+                                                <value>counterStory</value>
+                                                <a:documentation>Shift perspectives and explore the
+                                                  story from a different character's point of view.
+                                                  This is particulary important in thinking about
+                                                  whose stories are untold, misrepresented, or
+                                                  ignored (women, people of color, the LGBTQ
+                                                  comunity, etc).</a:documentation>
+                                                <value/>
+                                                <value/>
+                                            </choice>
+                                        </attribute>
+                                        <text/>
+                                    </element>
+                                    <element name="question">
+                                        <a:documentation>The question element is when you may have
+                                            about the original text.</a:documentation>
+                                        <zeroOrMore>
+                                            <attribute name="daID">
+                                                <data type="anyURI"/>
+                                                <a:documentation>If there are multiple authors
+                                                  (documentAuthor, NOT originalAuthor) of this
+                                                  document, use this to indicate who marked up this
+                                                  moment </a:documentation>
+                                            </attribute>
+                                        </zeroOrMore>
+                                        <attribute name="ID">
+                                            <data type="ID"/>
+                                            <a:documentation>Match this ID with the correct
+                                                "question" element in the play
+                                                section</a:documentation>
+                                        </attribute>
+                                        <attribute name="type">
+                                            <choice>
+                                                <value>content</value>
+                                                <a:documentation>A question about the content in the
+                                                  story and what is happening.</a:documentation>
+                                                <value>hypothetical</value>
+                                                <a:documentation>A hypothetical question, such as
+                                                  "what if this event was different?" or "how would
+                                                  the characters react if this happened?" This
+                                                  hypothetical question might be followed up with a
+                                                  "restory" or "expand" element</a:documentation>
+                                                <value>critical</value>
+                                                <a:documentation>A question that may problematize a
+                                                  particular moment or idea in the original
+                                                  text.</a:documentation>
+                                            </choice>
+                                        </attribute>
+                                        <text/>
+                                    </element>
+                                </element>
+                            </choice>
+                        </oneOrMore>
+                    </element>
+                </oneOrMore>
+            </element>
+            <element name="play">
+                <a:documentation>This is the section where you actually implement your remixes and
+                    plays of the story. Think of these as annotations or footnotes that line up with
+                    the ways you marked up the text under the "original" section. Remember: make
+                    sure your IDs in the play section match up with your IDs in the original
+                    section.</a:documentation>
+                <oneOrMore>
+                    <choice>
+                        <oneOrMore>
+                            <element name="closeRead">
+                                <attribute name="ID">
+                                    <data type="ID"/>
+                                    <a:documentation>Match this ID with the correct "closeRead"
+                                        element in the original section</a:documentation>
+                                </attribute>
+                                <text/>
+                            </element>
+                        </oneOrMore>
+                        <oneOrMore>
+                            <element name="replace">
+                                <attribute name="ID">
+                                    <data type="ID"/>
+                                    <a:documentation>Match this ID with the correct "replace"
+                                        element in the original section</a:documentation>
+                                </attribute>
+                                <text/>
+                            </element>
+                        </oneOrMore>
+                        <oneOrMore>
+                            <element name="expand">
+                                <attribute name="ID">
+                                    <data type="ID"/>
+                                    <a:documentation>Match this ID with the correct "expand" element
+                                        in the original section</a:documentation>
+                                </attribute>
+                                <text/>
+                            </element>
+                        </oneOrMore>
+                        <oneOrMore>
+                            <element name="restory">
+                                <attribute name="ID">
+                                    <data type="ID"/>
+                                    <a:documentation>Match this ID with the correct "restory"
+                                        element in the original section</a:documentation>
+                                </attribute>
+                                <text/>
+                            </element>
+                        </oneOrMore>
+                        <oneOrMore>
+                            <element name="question">
+                                <attribute name="ID">
+                                    <data type="ID"/>
+                                    <a:documentation>Match this ID with the correct "question"
+                                        element in the original section</a:documentation>
+                                </attribute>
+                                <text/>
+                            </element>
+                        </oneOrMore>
+                    </choice>
+                </oneOrMore>
+            </element>
+        </element>
+    </start>
+</grammar>
