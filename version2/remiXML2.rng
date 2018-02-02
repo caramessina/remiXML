@@ -264,6 +264,7 @@
                                     <a:documentation>Use the l to indicate the next line in a poem;
                                         the p can indicate stanzas.</a:documentation>
                                     <text/>
+                                    <zeroOrMore>
                                     <element name="closeRead">
                                         <a:documentation>The closeRead element is where you can do a
                                             close reading of the author's original language and word
@@ -453,7 +454,6 @@
                                                 <value/>
                                             </choice>
                                         </attribute>
-                                        <text/>
                                     </element>
                                     <element name="question">
                                         <a:documentation>The question element is when you may have
@@ -492,6 +492,7 @@
                                         </attribute>
                                         <text/>
                                     </element>
+                                    </zeroOrMore>
                                 </element>
                             </choice>
                         </oneOrMore>
