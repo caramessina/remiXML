@@ -409,6 +409,7 @@
                                             element asks you to answer the question "what if this
                                             event/detail in the story was
                                             different?"</a:documentation>
+                                        <text/>
                                         <zeroOrMore>
                                             <attribute name="daID">
                                                 <data type="anyURI"/>
@@ -454,7 +455,6 @@
                                                 <value/>
                                             </choice>
                                         </attribute>
-                                        <text/>
                                     </element>
                                     <element name="question">
                                         <a:documentation>The question element is when you may have
