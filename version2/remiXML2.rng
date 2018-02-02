@@ -454,6 +454,7 @@
                                                 <value/>
                                             </choice>
                                         </attribute>
+                                        <text/>
                                     </element>
                                     <element name="question">
                                         <a:documentation>The question element is when you may have
