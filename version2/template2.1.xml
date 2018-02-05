@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="./remiXML2.1.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet href="./visualize_remiXML2.1.xsl"?>
+<remiXML>
+    <metadata>
+        <originalTitle>Title of original text</originalTitle>
+        <originalAuthor>Original author's name</originalAuthor> <!-- There might be multiple authors. -->
+        <documentTitle>Title of document</documentTitle>
+        <documentAuthor ID="CM1">Your name</documentAuthor>
+        <!-- Don't forget to use your ID if there are multiple document authors. -->
+    </metadata>
+    <original>
+        <p><closeRead ID="CR1" type="critique">The full or excerpted original text will go in this section.</closeRead> For the most part, I (the
+            instructor) will be providing you with a template with the excerpts. This way, you will
+            not need to copy and paste or transcribe anything; instead, you can <question ID="Q1"
+                type="critical">focus on reading and marking up the original text.</question></p>
+        <p>The "p" element, or the element that is surrounding this text, <expand ID="E1" type="background">stands for paragraph.</expand> It
+            might also be used for stanzas in poetry. If there is poetry, the "l" element can mark
+            up the lines. When you go to visualize your <replace ID="RP3" type="verb">marked up</replace> document using the red play button
+            at the top of Oxygen (so when you turn your XML file into an HTML file to view in your
+            browser), you will be able to see the difference between a line and a paragraph.</p>
+        <p><l>This is a line surrounded by a paragraph <replace ID="RP1" type="noun">element</replace></l>
+            <l>This is a continued line.</l>
+            <l>Poetry is fun.</l>
+            <l>Too bad I am not very good at it.</l></p>
+        <p>Now that we've talked a bit about what the "original" element tag is for and how to use
+            the paragraph and line elements, it's time to dig into the fun question: how do we mark
+            up texts?</p>
+        <p>In this schema, there are five main elements you will use to mark up texts: closeRead,
+            expand, question, replace, and restory.</p>
+        <p>Let's use the closeRead example to talk a bit about how to structure your elements as you
+            mark up the original text. The closeRead element is used for more of the classic,
+            traditional close readings. When you are looking to mark up and close read a moment in
+            the text, you will highlight the moment that you are close reading and wrap it in the
+            "closeRead" (case sensitive, like passwords) element by using a start tag. You can
+            highlight and wrap moments in the text by clicking Command + E (for Macs); then begin to
+            type out the element and Oxygen should provide suggestions for you. </p>
+        <p><closeRead type="description" ID="CR3">In the closeRead element (like the other elements),</closeRead> you have multiple TYPES of close
+            reading to choose from. You MUST choose one of these types. When you type the "type"
+            attribute, the equal sign, and the quotation marks, Oxygen is smart enough to give you a
+            list of options to choose from! There is even an explanation of each type of close
+            reading. Thanks, Oxygen! You will also notice there are two other attributes: the "ID"
+            and the "daID." The ID attribute is a requirement; you make this value, however, and you
+            must make sure the ID in this section matches with the corresponding ID in the "play"
+            section. Otherwise, you will not be connecting the moment you're marking up with your
+            actual close reading analysis. </p>
+        <p>Also, you will notice that when you click the red play button and transform this document
+            from an XML to an HTML file, your HTML file that pops up in your browser will have
+            colors all over it! The colors indicate to your reader of the document which moments you
+            have marked up and how you have marked it up. When your reader clicks on the colored
+            font, your actual comments will pop up! Here are the elements that the different colors
+            represent:</p>
+        <p><question type="content" ID="Q2">purple means question</question>
+            <l><expand type="description" ID="E2">pink means expand</expand></l>
+            <l><closeRead ID="CR2" type="pattern">blue means close read</closeRead></l>
+            <l><replace ID="RP2" type="noun">orange means replace</replace></l>
+            <l><restory ID="RS2" type="AU">green means restory</restory></l>
+        </p>
+        <p>You will also probably notice that reading this XML document can be a bit tough because
+            there are a bunch of elements marking up the text. This is why the HTML document is
+            important! It will be easier to read AND the "play" moments will be connected to the
+            moments in the "original" text. When you view the HTML document, you now know what my
+            interventions in this text have said.</p>
+    </original>
+    <play>
+        <closeRead REF="CR1">CLOSE READ</closeRead>
+        <closeRead REF="CR2">There is repetition happening, which means the author (myself) is
+            emphasizing something important! Also I could just be listing. </closeRead>
+        <closeRead REF="CR3">Confirms that the closeRead as an example through the use of the parenthetical side note </closeRead>
+        <expand REF="E1">The origin of inspiration for using the "p" element comes from HTML's "p" element, which represents a paragraph, as well.</expand>
+        <expand REF="E2">It's not a real pink, but more of a muted red. Because every color looks
+            muted when its applied to Times New Roman font.</expand>
+        <question REF="Q1">What does it mean to "read" and "mark up" a text? How do we define these
+            actions? </question>
+        <question REF="Q2">What is "purple?"</question>
+        <replace REF="RP1">start tag and end tag</replace>
+        <replace REF="RP2">replace means green</replace>
+        <replace REF="RP3">XML formatted</replace>
+        <restory REF="RS2">In an alternate universe, blue might mean replace!</restory>
+    </play>
+</remiXML>
