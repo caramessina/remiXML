@@ -517,9 +517,9 @@
                     <choice>
                         <oneOrMore>
                             <element name="closeRead">
-                                <attribute name="pID">
-                                    <data type="ID"/>
-                                    <a:documentation>Match this ID with the correct "closeRead"
+                                <attribute name="REF">
+                                    <data type="IDREF"/>
+                                    <a:documentation>Match this ID REFerence with the correct "closeRead"
                                         element in the original section</a:documentation>
                                 </attribute>
                                 <text/>
@@ -527,9 +527,9 @@
                         </oneOrMore>
                         <oneOrMore>
                             <element name="replace">
-                                <attribute name="pID">
-                                    <data type="ID"/>
-                                    <a:documentation>Match this ID with the correct "replace"
+                                <attribute name="REF">
+                                    <data type="IDREF"/>
+                                    <a:documentation>Match this ID REFerence with the correct "replace"
                                         element in the original section</a:documentation>
                                 </attribute>
                                 <text/>
@@ -537,9 +537,9 @@
                         </oneOrMore>
                         <oneOrMore>
                             <element name="expand">
-                                <attribute name="pID">
-                                    <data type="ID"/>
-                                    <a:documentation>Match this ID with the correct "expand" element
+                                <attribute name="REF">
+                                    <data type="IDREF"/>
+                                    <a:documentation>Match this ID REFerence with the correct "expand" element
                                         in the original section</a:documentation>
                                 </attribute>
                                 <text/>
@@ -547,9 +547,9 @@
                         </oneOrMore>
                         <oneOrMore>
                             <element name="restory">
-                                <attribute name="pID">
-                                    <data type="ID"/>
-                                    <a:documentation>Match this ID with the correct "restory"
+                                <attribute name="REF">
+                                    <data type="IDREF"/>
+                                    <a:documentation>Match this ID REFerence with the correct "restory"
                                         element in the original section</a:documentation>
                                 </attribute>
                                 <text/>
@@ -557,9 +557,9 @@
                         </oneOrMore>
                         <oneOrMore>
                             <element name="question">
-                                <attribute name="pID">
-                                    <data type="ID"/>
-                                    <a:documentation>Match this ID with the correct "question"
+                                <attribute name="REF">
+                                    <data type="IDREF"/>
+                                    <a:documentation>Match this ID REFerence with the correct "question"
                                         element in the original section</a:documentation>
                                 </attribute>
                                 <text/>
