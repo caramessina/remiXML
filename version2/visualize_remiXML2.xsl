@@ -10,7 +10,7 @@
                 <style><![CDATA[
                     body{
                         background-color: white;
-                        margin: 10px 50px 10px 50px}
+                        margin: 50px 50px 50px 50px}
                     h1{
                         color: black;
                     }
@@ -258,8 +258,53 @@
                     <xsl:value-of select="count(/remiXML/play/restory)"/>
                 </li>
             </ul>
-
+            <br/>
+            <b>
+                <xsl:text>List of Interventions: </xsl:text>
+            </b>
+            <br/>
+            <xsl:apply-templates/>
         </div>
+    </xsl:template>
+    
+    <xsl:template match="/remiXML/play/closeRead">
+        <br/>
+        <b>
+            <xsl:text>Close Read: </xsl:text>
+        </b>
+        <xsl:apply-templates/>
+    </xsl:template>
+    
+    <xsl:template match="/remiXML/play/expand">
+        <br/>
+        <b>
+            <xsl:text>Expansion: </xsl:text>
+        </b>
+        <xsl:apply-templates/>
+    </xsl:template>
+    
+    <xsl:template match="/remiXML/play/question">
+        <br/>
+        <b>
+            <xsl:text>Question: </xsl:text>
+        </b>
+        <xsl:apply-templates/>
+    </xsl:template>
+    
+    <xsl:template match="/remiXML/play/replace">
+        <br/>
+        <b>
+            <xsl:text>Replace: </xsl:text>
+        </b>
+        <xsl:apply-templates/>
+    </xsl:template>
+    
+    <xsl:template match="/remiXML/play/restory">
+        <br/>
+        <b>
+            <xsl:text>Restory: </xsl:text>
+        </b>
+        <xsl:apply-templates/>
     </xsl:template>
 
 
