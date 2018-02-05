@@ -10,7 +10,7 @@
                 <style><![CDATA[
                     body{
                         background-color: white;
-                            margin: 150px 150px 150px 150px}
+                            margin: 50px 150px 50px 150px}
                     h1{
                         color: black;
                     }
