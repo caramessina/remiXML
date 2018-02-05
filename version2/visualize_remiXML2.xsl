@@ -10,7 +10,10 @@
                 <style><![CDATA[
                     body{
                         background-color: white;
-                        margin: 50px 50px 50px 50px}
+                            margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 150px;
+    margin-left: 150px;
                     h1{
                         color: black;
                     }
@@ -239,7 +242,7 @@
             <ul>
                 <li>
                     <xsl:text>Close reading: </xsl:text>
-                <xsl:value-of select="count(/remiXML/play/closeRead)"/>
+                    <xsl:value-of select="count(/remiXML/play/closeRead)"/>
                 </li>
                 <li>
                     <xsl:text>Expand: </xsl:text>
@@ -266,7 +269,7 @@
             <xsl:apply-templates/>
         </div>
     </xsl:template>
-    
+
     <xsl:template match="/remiXML/play/closeRead">
         <br/>
         <b>
@@ -274,7 +277,7 @@
         </b>
         <xsl:apply-templates/>
     </xsl:template>
-    
+
     <xsl:template match="/remiXML/play/expand">
         <br/>
         <b>
@@ -282,7 +285,7 @@
         </b>
         <xsl:apply-templates/>
     </xsl:template>
-    
+
     <xsl:template match="/remiXML/play/question">
         <br/>
         <b>
@@ -290,7 +293,7 @@
         </b>
         <xsl:apply-templates/>
     </xsl:template>
-    
+
     <xsl:template match="/remiXML/play/replace">
         <br/>
         <b>
@@ -298,7 +301,7 @@
         </b>
         <xsl:apply-templates/>
     </xsl:template>
-    
+
     <xsl:template match="/remiXML/play/restory">
         <br/>
         <b>
