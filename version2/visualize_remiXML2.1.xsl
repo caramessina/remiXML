@@ -262,24 +262,21 @@
             </ul>
             <br/>
             <b>
-                <xsl:text>Quantifying your mark up choices: </xsl:text>
+                <xsl:text>List of Interventions: </xsl:text>
             </b>
             <br/>
             <xsl:apply-templates/>
-
         </div>
     </xsl:template>
 
-
-
     <xsl:template match="/remiXML/play/closeRead">
-
         <br/>
         <b>
             <xsl:text>Close Read: </xsl:text>
         </b>
         <xsl:apply-templates/>
     </xsl:template>
+    
     <xsl:template match="/remiXML/play/expand">
         <br/>
         <b>
