@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="./remiXML2.1.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-stylesheet href="./visualize_remiXML2.1.xsl"?>
+<?xml-model href="https://raw.githubusercontent.com/caramessina/remiXML/master/version2/remiXML2.1.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-stylesheet href="https://raw.githubusercontent.com/caramessina/remiXML/master/version2/visualize_remiXML2.1.xsl"?>
 <remiXML>
     <metadata>
         <originalTitle>Title of original text</originalTitle>
