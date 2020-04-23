@@ -3,22 +3,33 @@
 ## Elements:
 
 **Metadata**
-- <original-title> the title of the original text
-- <doc-title> the title of the document
-- <original-writer> the original writer
-- <remixer> the person doing the remix
+- **original-title** the title of the original text
+- **doc-title>** the title of the document
+- **original-writer** the original writer
+- **remixer** the person doing the remix
     - @ID, provide an ID for the person doing the remixing
   
 **Original**
-- <p> paragraph
-- <closeRead> The closeRead element is where you can do a close reading of the author's original language and word choice. This is more of a traditional approach to reading, one that asks you to study and analyze specific moments. 
+- **p** paragraph
+- **closeRead** The closeRead element is where you can do a close reading of the author's original language and word choice. This is more of a traditional approach to reading, one that asks you to study and analyze specific moments. 
   - @type pattern: Analyze a larger pattern in the language and what this pattern may suggest.
   - @type wordChoice: Analyze specific word choices that the author uses and think about why they made that choice.
   - @type description: Analyze the meaning of a description that the author provides
   - @type inference: Analyze what a specific moment in the text may be insinuating. How did you come to this inference?
   - @type critique: Be critical of how something is represented or shown. Might be useful for problematizing narrative choices.
-- <replace> The replace element should only be used to replace a specific word/phrase. You might use this element multiple times if the word appears multiple times throughout the original text.
-  -
+- **replace** The replace element should only be used to replace a specific word/phrase. You might use this element multiple times if the word appears multiple times throughout the original text.
+  - @type pronoun
+  - @type adjective
+  - @type verb
+  - @type noun
+- **expand** The expand element will be useful when you want to expand a particular moment. This may be useful if you're interested in a character's backstory or would like to develop on a character who may not appear often.
+    - @type background: Explore the background of a particular
+                                                idea, moment, character, interaction, location,
+                                                etc.
+    - @type moment: Expand on a particular moment in the
+                                                original text that you would like to see more
+                                                of.
+    - @type
     
     
     
