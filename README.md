@@ -1,5 +1,7 @@
 ## remiXML 2.1 Schema
 
+In any future iterations of this RelaxNG schema, be sure to edit the datatype="ID" to datatype="REF" under all the "play" children elements.
+
 ## Elements:
 
 **Metadata**
