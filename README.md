@@ -11,6 +11,7 @@
   
 **Original**
 - **p** paragraph
+- **l** line for poetry/lyrics
 - **closeRead** The closeRead element is where you can do a close reading of the author's original language and word choice. This is more of a traditional approach to reading, one that asks you to study and analyze specific moments. 
   - @type pattern: Analyze a larger pattern in the language and what this pattern may suggest.
   - @type wordChoice: Analyze specific word choices that the author uses and think about why they made that choice.
@@ -23,161 +24,25 @@
   - @type verb
   - @type noun
 - **expand** The expand element will be useful when you want to expand a particular moment. This may be useful if you're interested in a character's backstory or would like to develop on a character who may not appear often.
-    - @type background: Explore the background of a particular
-                                                idea, moment, character, interaction, location,
-                                                etc.
-    - @type moment: Expand on a particular moment in the
-                                                original text that you would like to see more
-                                                of.
-    - @type
-    
-    
-    
-                <transform>
-                    playID
-                    remixerID
-                <expand>
-                    playID
-                    remixerID
-                <analysis>
-                    playID
-                    remixerID
-                <question>
-                    playID
-                    remixerID
-                <feedback>
-                    playID
-                    remixerID
-                <replace>
-                    playID
-                    remixerID
-            </p>
-
-**\<closeRead\>** under the "original" element, the closeRead element indicates the text you chose to mark up is the text you will analyze under the "play" element. In the "play" element, you write our your analysis of the particular moment you marked up.
-
-**\<doc-title\>** the title of the remixed XML document; I encourage you to be more creative than "Remix of Original Title." Think about the main ways you have chosen to remix the text; what moments did you choose and why? How did you remix them?
-
-**\<expand\>** under the "original" element, the expand element indicates the text you chose to mark up is the text you will expand under the "play" element. In the "play" element, you write our your expansion of the particular moment you marked up.
-
-**\<feedback\>** under the "original" element, marks up the moment that feedback will be provided; this will be especially useful for peer-to-peer feedback and engagement as well as instructor feedback. In the "play" element, this is where the actual feedback is written out. 
-
-**\<metadata\>** the first main tag that contains information about yourself, the document name, the original writer, and more
-
-**\<original\>** the second main tag that contains the original text to be marked-up 
-
-**\<original-title\>** the title of the original text
-
-**\<p\>** to indicate a paragraph break
-
-**\<play\>** the third main tag that consists of content created as the original text is being read and marked-up
-
-**\<question\>** under the "original" element, the question element indicates the text you chose to mark up is the text you will ask a question about under the "play" element. In the "play" element, you write our your question of the particular moment you marked up.
-
-**\<remiXML\>** the root element; this is the tag that surroungs the metadata, original, and play elements
-
-**\<transform\>** under the "original" element, the transform element indicates the text you chose to mark up is the text you will transform under the "play" element. In the "play" element, you write our your transformation of the particular moment you marked up. These transformations are answers to "what if" questions and usually exist in an alternate timeline/universe from the original text.
-
-**\<replace\>** under the "original" element, the replace element indicates which part of the text you would like to replace. In the "play" element, you will do the actual replacement. This replacement may be changing one or two words; it is different from transform because transform digs further into the "what if" question, while replace merely does to work of changing a word or two. This may be particularly useful with thinking about racebending, genderbending, changing objects, changing characters, etc.
-
-## Attributes:
-
-**ID** The ID attribute will be used in two elements: the **\<original-writer\>** and the **\<remixer\>** element. The attribute value of the ID will be the unique identifier for the original writer (IF the original writer is yourself) and the remixer (whether the remixer is yourself or your peer). Use your initials and number as the ID: my ID is CM1
-
-**remixerID** This is the same remixer ID that you used in the ID attribute in <remixer>. This will help to diferentiate who has marked up the text, especially if it is a peer engaging with another peers' work
-
-**playID** In the **\<original\>** text, this attribute will signal that moment in the text you have decided to wrap in an element (analysis, expand, question, transform) and label it. This ID must be the same ID you use in the **\<play\>** section. For example, if you mark up a particular section in the original text for analysis, in the play section, be sure your analysis has the same ID. This will link your analysis to the moment in the original text.
-
-**playREF** In the **\<play\>** section, this attribute (playREF stands for play reference, indicating that you are referencing something from the original text) will be the same as the playID you used to markup the particular moment you want to play with. Example: in the \<original\> section, you decide to mark up a moment you want to expand. This moment as a playID. In the <play> section, you use the \<expand\> element in which you will actually write the expansion; for the "playREF" attribute of this expand element, you will use the same ID number (for example: playID="EX1" and playREF="EX2").
-
-## Breakdown:
-
-    <remiXML>
-        <metadata>
-            <original-title>
-            <doc-title>
-            <original-writer>
-                ID
-            <remixer>
-                ID
-        </metadata>
-        <original>
-            <p>
-                <transform>
-                    playID
-                    remixerID
-                <expand>
-                    playID
-                    remixerID
-                <analysis>
-                    playID
-                    remixerID
-                <question>
-                    playID
-                    remixerID
-                <feedback>
-                    playID
-                    remixerID
-                <replace>
-                    playID
-                    remixerID
-            </p>
-        </original>
-        <play>
-            <expand>
-                playREF
-            <analysis>
-                playREF
-            <transform>
-                playREF
-            <feedback>
-                playREF
-            <replace>
-                playREF
-        </play>
-    </remiXML>
-        Breakdown:
-
-<remiXML>
-    <metadata>
-        <original-title>
-        <doc-title>
-        <original-writer>
-            ID
-        <remixer>
-            ID
-    </metadata>
-    <original>
-        <p>
-            <transform>
-                playID
-                remixerID
-            <expand>
-                playID
-                remixerID
-            <analysis>
-                playID
-                remixerID
-            <question>
-                playID
-                remixerID
-            <feedback>
-                playID
-                remixerID
-            <replace>
-                playID
-                remixerID
-        </p>
-    </original>
-    <play>
-        <expand>
-            playREF
-        <analysis>
-            playREF
-        <transform>
-            playREF
-        <feedback>
-            playREF
-        <replace>
-            playREF
-    </play>
-</remiXML>
+  - @type background: Explore the background of a particular idea, moment, character, interaction, location, etc.
+  - @type moment: Expand on a particular moment in the original text that you would like to see more of.
+  - @type description: Expand a particular description.
+  - @type character: Expand on a character's actions. Maybe there is a character who you're interested in and would like to develop further. Take a moment they appear and further explore what else they might be doing.
+- **restory** The restory element is where you can transform something about the story. You might focus on identity, time, place, and counter-storytelling. This element asks you to answer the question "what if this event/detail in the story was different?"
+  - @type identity: There are different types of identity bending, including racebending, queerbending, genderbending, agebending, and more. You might pair this element up with the "replace" element
+  - @type AU: AU stands for "alternate universe." You want to explore an alternate universe/location from the original text.
+  - @type alternateTimeline: Similar to AU, this asks you to think about an alternate history from the original text.
+  - @type parody: Do a satirical transformation.
+  - @type counterStory: Shift perspectives and explore the story from a different character's point of view. This is particulary important in thinking about whose stories are untold, misrepresented, or ignored (women, people of color, the LGBTQ comunity, etc).
+- **question** The question element is when you may have about the original text.
+  - @type content: A question about the content in the story and what is happening.
+  - @type hypothetical: A hypothetical question, such as "what if this event was different?" or "how would the characters react if this happened?" This hypothetical question might be followed up with a "restory" or "expand" element.
+  - @type critical: >A question that may problematize a particular moment or idea in the original text.
+  
+**Play**
+This is the section where you actually implement your remixes and plays of the story. Think of these as annotations or footnotes that line up with the ways you marked up the text under the "original" section. Remember: make sure your IDs in the play section match up with your IDs in the original section.
+- **closeRead** match ID to closeRead in original
+- **replace** match ID to replace in original
+- **expand** match ID to expand in original
+- **restory** match ID to restory in original
+- **question** match ID to question in original
