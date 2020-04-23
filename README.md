@@ -2,19 +2,26 @@
 
 ## Elements:
 
-**\Metadata**\
+**Metadata**
 - <original-title> the title of the original text
 - <doc-title> the title of the document
 - <original-writer> the original writer
 - <remixer> the person doing the remix
     - @ID, provide an ID for the person doing the remixing
   
-**\Original**\
+**Original**
 - <p> paragraph
 - <closeRead> The closeRead element is where you can do a close reading of the author's original language and word choice. This is more of a traditional approach to reading, one that asks you to study and analyze specific moments. 
   - @type pattern: Analyze a larger pattern in the language and what this pattern may suggest.
   - @type wordChoice: Analyze specific word choices that the author uses and think about why they made that choice.
+  - @type description: Analyze the meaning of a description that the author provides
+  - @type inference: Analyze what a specific moment in the text may be insinuating. How did you come to this inference?
+  - @type critique: Be critical of how something is represented or shown. Might be useful for problematizing narrative choices.
 - <replace> The replace element should only be used to replace a specific word/phrase. You might use this element multiple times if the word appears multiple times throughout the original text.
+  -
+    
+    
+    
                 <transform>
                     playID
                     remixerID
